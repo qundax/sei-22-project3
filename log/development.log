@@ -1,0 +1,1333 @@
+Started GET "/" for ::1 at 2020-05-18 16:06:19 +0800
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "sei-22-project3_development" does not exist
+):
+  
+activerecord (5.2.4.2) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4.2) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4.2) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4.2) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (885.5ms)[0m  [1m[35mCREATE DATABASE "sei-22-project3_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (353.4ms)[0m  [1m[35mCREATE DATABASE "sei-22-project3_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-05-18 16:09:11 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (8.4ms)
+Completed 200 OK in 25ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (81.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Carparks (20200518081354)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "carparks" ("id" bigserial primary key, "location" character varying, "totallots" integer, "reservedlots" integer, "photo_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200518081354_carparks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200518081354"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-18 10:27:14.152343"], ["updated_at", "2020-05-18 10:27:14.152343"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7454056348614310050)[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to Carparks (20200518081354)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (17.2ms)[0m  [1m[35mDROP TABLE "carparks"[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200518081354"]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7454056348614310050)[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Carparks (20200518081354)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "carparks" ("id" bigserial primary key, "location" character varying, "totallots" integer, "reservedlots" integer DEFAULT 0, "photo_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200518081354_carparks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200518081354"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mCarpark Create (1.3ms)[0m  [1m[32mINSERT INTO "carparks" ("location", "totallots", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["location", "Ascencio"], ["totallots", 10], ["photo_url", "http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg"], ["created_at", "2020-05-18 10:33:54.881631"], ["updated_at", "2020-05-18 10:33:54.881631"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCarpark Create (0.9ms)[0m  [1m[32mINSERT INTO "carparks" ("location", "totallots", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["location", "Regency"], ["totallots", 10], ["photo_url", "http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg"], ["created_at", "2020-05-18 10:33:54.885607"], ["updated_at", "2020-05-18 10:33:54.885607"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCarpark Create (0.5ms)[0m  [1m[32mINSERT INTO "carparks" ("location", "totallots", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["location", "Kovan Market"], ["totallots", 10], ["photo_url", "http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg"], ["created_at", "2020-05-18 10:33:54.889125"], ["updated_at", "2020-05-18 10:33:54.889125"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCarpark Create (0.5ms)[0m  [1m[32mINSERT INTO "carparks" ("location", "totallots", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["location", "Jurong Point"], ["totallots", 10], ["photo_url", "http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg"], ["created_at", "2020-05-18 10:33:54.891936"], ["updated_at", "2020-05-18 10:33:54.891936"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+Started GET "/" for ::1 at 2020-05-18 19:02:24 +0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 19:04:24 +0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CarparksController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carparks" for ::1 at 2020-05-18 19:05:01 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  Rendered carparks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 302ms (Views: 298.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 19:05:55 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  Rendered carparks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 19:08:05 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.9ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:5
+  Rendered carparks/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 72ms (Views: 58.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:08:12 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `photourl' for #<Carpark:0x00007fab19c7b638>
+Did you mean?  photo_url
+               photo_url?
+               photo_url=):
+     5: 
+     6: <p>
+     7:   <strong>Photo url:</strong>
+     8:   <%= @carpark.photourl %>
+     9: </p>
+    10: 
+    11: 
+  
+app/views/carparks/show.html.erb:8:in `_app_views_carparks_show_html_erb___3253321011598814205_70186424321360'
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:09:13 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    17: 
+    18: <p>
+    19:   <strong>Lots remaining:</strong>
+    20:   <%= @carpark.totallots -@carpark.reservedlots  %>
+    21: </p>
+  
+app/views/carparks/show.html.erb:20:in `_app_views_carparks_show_html_erb___3253321011598814205_70186440780780'
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:09:16 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    17: 
+    18: <p>
+    19:   <strong>Lots remaining:</strong>
+    20:   <%= @carpark.totallots -@carpark.reservedlots  %>
+    21: </p>
+  
+app/views/carparks/show.html.erb:20:in `_app_views_carparks_show_html_erb___3253321011598814205_70186425190220'
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:11:41 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    17: 
+    18: <p>
+    19:   <strong>Lots remaining:</strong>
+    20:   <% @carpark.totallots -@carpark.reservedlots  %>
+    21: </p>
+  
+app/views/carparks/show.html.erb:20:in `_app_views_carparks_show_html_erb___3253321011598814205_70186425649340'
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:11:53 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:13:18 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 8.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/carparks_controller.rb:20:in `show'
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:15:16 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 54ms (Views: 31.9ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 19:16:04 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 19:16:11 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 19:17:33 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/new" for ::1 at 2020-05-18 19:17:35 +0800
+Processing by CarparksController#new as HTML
+  Rendering carparks/new.html.erb within layouts/application
+  Rendered carparks/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 76ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/carparks" for ::1 at 2020-05-18 19:17:45 +0800
+Processing by CarparksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ixoUoAfQma1/6MbMZUe8oV4ggqSEoiS0cW7an4JesydjVDR1Ui3pZcUfhVAEJdOefmNrTmUX+pGvsMUJzZAKLA==", "carpark"=>{"location"=>"happy", "totallots"=>"5", "photo_url"=>"somewhere"}, "commit"=>"Save Carpark"}
+Unpermitted parameter: :photo_url
+  [1m[35m (7.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:14
+  [1m[36mCarpark Create (1.7ms)[0m  [1m[32mINSERT INTO "carparks" ("location", "totallots", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["location", "happy"], ["totallots", 5], ["created_at", "2020-05-18 11:17:45.246079"], ["updated_at", "2020-05-18 11:17:45.246079"]]
+  ↳ app/controllers/carparks_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:14
+Redirected to http://localhost:3000/carparks/5
+Completed 302 Found in 17ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/carparks/5" for ::1 at 2020-05-18 19:17:45 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (1.1ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 74ms (Views: 57.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 19:17:49 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 19:44:51 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 19:45:12 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:23:45 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (1.1ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:24:38 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:29:01 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:29:07 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:29:20 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:29:31 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 42ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:35:46 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (1.2ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 65ms (Views: 42.7ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 20:35:48 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.7ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 20:36:07 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.8ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:36:10 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 20:36:12 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:36:14 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (240.1ms)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00007fab16319160>:0x00007fab19f72be8>
+Did you mean?  font_path):
+    14: 
+    15: <% end %>
+    16: 
+    17: <%= link_to 'Back', root_path %>
+  
+app/views/carparks/edit.html.erb:17:in `_app_views_carparks_edit_html_erb___1882848730735682518_70186425883260'
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:36:30 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:36:54 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:45:01 +0800
+  
+SyntaxError (/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/controllers/carparks_controller.rb:29: syntax error, unexpected tIVAR, expecting ')'
+...k.update(:reservedlots @carpark.reservedlots+1)
+...                       ^~~~~~~~
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/controllers/carparks_controller.rb:29: syntax error, unexpected ')', expecting keyword_end
+...edlots @carpark.reservedlots+1)
+...                              ^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/controllers/carparks_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/carparks_controller.rb:29: syntax error, unexpected tIVAR, expecting ')'
+app/controllers/carparks_controller.rb:29: syntax error, unexpected ')', expecting keyword_end
+app/controllers/carparks_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/carparks/" for ::1 at 2020-05-18 20:45:12 +0800
+  
+SyntaxError (/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/controllers/carparks_controller.rb:29: syntax error, unexpected tIVAR, expecting ')'
+...k.update(:reservedlots @carpark.reservedlots+1)
+...                       ^~~~~~~~
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/controllers/carparks_controller.rb:29: syntax error, unexpected ')', expecting keyword_end
+...edlots @carpark.reservedlots+1)
+...                              ^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/controllers/carparks_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/carparks_controller.rb:29: syntax error, unexpected tIVAR, expecting ')'
+app/controllers/carparks_controller.rb:29: syntax error, unexpected ')', expecting keyword_end
+app/controllers/carparks_controller.rb:39: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/carparks/" for ::1 at 2020-05-18 20:46:10 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (1.0ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 63ms (Views: 44.9ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:46:15 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 25.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/carparks/1/edit" for ::1 at 2020-05-18 20:46:17 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/carparks/1/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:47:18 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 47ms (Views: 26.1ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/carparks/1/edit" for ::1 at 2020-05-18 20:47:20 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/carparks/1/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:48:48 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (2.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/carparks/1/edit" for ::1 at 2020-05-18 20:48:50 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/carparks/1/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:49:19 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 26.1ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/carparks/1/edit" for ::1 at 2020-05-18 20:50:02 +0800
+  
+ActionController::RoutingError (No route matches [POST] "/carparks/1/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/carparks/1/edit" for ::1 at 2020-05-18 20:56:43 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 66ms (Views: 39.7ms | ActiveRecord: 11.5ms)
+
+
+Started PATCH "/carparks/1" for ::1 at 2020-05-18 20:56:44 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"18il5UrJ9NQoyZVtZrcSi4zQ1SJX+BA3M7u5uOcW26E/hoUwHzSEHJI+1vEH1X20rJM8yLZNzhLtZaYuqNhiqg==", "commit"=>"Update Carpark", "id"=>"1"}
+  [1m[36mCarpark Load (0.9ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mCarpark Update (4.7ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 1], ["updated_at", "2020-05-18 12:56:44.975840"], ["id", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 9.3ms)
+
+
+  
+NoMethodError (undefined method `redirect' for #<CarparksController:0x00007fab19adabf8>
+Did you mean?  redirect_to):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/1" for ::1 at 2020-05-18 20:57:08 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"18il5UrJ9NQoyZVtZrcSi4zQ1SJX+BA3M7u5uOcW26E/hoUwHzSEHJI+1vEH1X20rJM8yLZNzhLtZaYuqNhiqg==", "commit"=>"Update Carpark", "id"=>"1"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mCarpark Update (0.5ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 2], ["updated_at", "2020-05-18 12:57:08.543829"], ["id", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:31
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 32ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 20:57:08 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 20:57:14 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.7ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 23.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/carparks/3" for ::1 at 2020-05-18 20:57:19 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCarpark Load (0.7ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 22.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 20:57:36 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (1.0ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 27.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 20:57:42 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (1.8ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 30.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:04:53 +0800
+  
+SyntaxError (/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/controllers/carparks_controller.rb:61: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/carparks_controller.rb:61: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/carparks/" for ::1 at 2020-05-18 21:05:01 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (1.1ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 75ms (Views: 49.7ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:05:39 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:05:49 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:05:51 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:05:52 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:05:52 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:06:01 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/" for ::1 at 2020-05-18 21:08:12 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (18.1ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 57ms (Views: 33.2ms | ActiveRecord: 18.1ms)
+
+
+Started DELETE "/carparks/1" for ::1 at 2020-05-18 21:08:19 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DKSkwQLg0fAwvV3CfBx8AsWX53wgrqv5+rvTuzelJcvk6oQUVx2hOIpKHl4dfhM95dQOlsEbddwkZcwteGucwA==", "id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:41
+  [1m[36mCarpark Update (1.0ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 1], ["updated_at", "2020-05-18 13:08:19.286291"], ["id", 1]]
+  ↳ app/controllers/carparks_controller.rb:41
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:41
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 12ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:08:19 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (6.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 43ms (Views: 32.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 21:08:21 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:09:15 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 27.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/1" for ::1 at 2020-05-18 21:09:21 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:09:23 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 26.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:10:04 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (14.9ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 72ms (Views: 52.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:10:34 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:13:43 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  Rendered carparks/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...fe_append='      	<div>	No more season parking lots. Try aga...
+...                 	     	   ^~~~
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:17: unknown regexp option - p
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:18: syntax error, unexpected '<'
+      	</div>
+      	^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:21: unknown regexp options - dv
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:22: syntax error, unexpected '<'
+      	    		 <div class="col-3">
+      	    		 ^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:25: syntax error, unexpected '<', expecting ')'
+      	<div>'.freeze;@output_buffer.a...
+      	^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( link_to 'Apply for season parking', edit_ca...
+...                          ^~~~~
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...nk_to 'Apply for season parking', edit_carpark_path(carpark)...
+...                        ^~~~~~~
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:29: unknown regexp option - p
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:30: syntax error, unexpected '<'
+      	</div>
+      	^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:33: syntax error, unexpected '<'
+      	<br/>
+      	^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:39: unterminated string meets end of file
+          end
+             ^
+/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/index.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/carparks/index.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/carparks/index.html.erb:17: unknown regexp option - p
+app/views/carparks/index.html.erb:18: syntax error, unexpected '<'
+app/views/carparks/index.html.erb:21: unknown regexp options - dv
+app/views/carparks/index.html.erb:22: syntax error, unexpected '<'
+app/views/carparks/index.html.erb:25: syntax error, unexpected '<', expecting ')'
+app/views/carparks/index.html.erb:25: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/carparks/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/carparks/index.html.erb:29: unknown regexp option - p
+app/views/carparks/index.html.erb:30: syntax error, unexpected '<'
+app/views/carparks/index.html.erb:33: syntax error, unexpected '<'
+app/views/carparks/index.html.erb:39: unterminated string meets end of file
+app/views/carparks/index.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:11 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/5" for ::1 at 2020-05-18 21:15:28 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:30 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (18.9ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 56ms (Views: 31.8ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/carparks/5/edit" for ::1 at 2020-05-18 21:15:34 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/carparks/5" for ::1 at 2020-05-18 21:15:35 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ic2Shy/JzcDGPevKW52BTuX34KL9BtE5IoJAMrkGLZDJg7JSejS9CHzKqFY6/+5xxbQJSByzDxz8XF+k9siUmw==", "commit"=>"Update Carpark", "id"=>"5"}
+  [1m[36mCarpark Load (1.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:30
+  [1m[35m (24.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mCarpark Update (0.7ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 1], ["updated_at", "2020-05-18 13:15:35.750718"], ["id", 5]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:31
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 45ms (ActiveRecord: 27.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:35 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/5/edit" for ::1 at 2020-05-18 21:15:39 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (25.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 55ms (Views: 22.4ms | ActiveRecord: 25.6ms)
+
+
+Started PATCH "/carparks/5" for ::1 at 2020-05-18 21:15:40 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nfi+QoxHYI62NsgdOSOWmIWeeyWcu2Y5OcfeRnAWylndtp6X2boQRgzBi4FYQfmnpd2Sz30OuBznGcHQP9hzUg==", "commit"=>"Update Carpark", "id"=>"5"}
+  [1m[36mCarpark Load (23.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mCarpark Update (0.4ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 2], ["updated_at", "2020-05-18 13:15:40.201827"], ["id", 5]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:31
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 30ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:40 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (23.1ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 55ms (Views: 27.5ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/carparks/5/edit" for ::1 at 2020-05-18 21:15:40 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 36ms (Views: 27.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/carparks/5" for ::1 at 2020-05-18 21:15:42 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hfMlqofn/mFtXpAz+mFxzAYYnkzmxXC4QWEgGbmlMo5tvQV/0hqOqdep06+bAx7zJlt3pgdwrp2fvz+P9muLhQ==", "commit"=>"Update Carpark", "id"=>"5"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mCarpark Update (25.5ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 3], ["updated_at", "2020-05-18 13:15:42.374188"], ["id", 5]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:31
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 34ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:42 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/5/edit" for ::1 at 2020-05-18 21:15:43 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/carparks/5" for ::1 at 2020-05-18 21:15:44 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0T92CPk4kxmtW7cRQnitGw3DP5DOetllUMrWPU+I3go5cVbdrMXj0Res9I0jGsIkLYDWei/PB0COFMmrAEZnAQ==", "commit"=>"Update Carpark", "id"=>"5"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mCarpark Update (0.6ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 4], ["updated_at", "2020-05-18 13:15:44.304390"], ["id", 5]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:31
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 11ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:44 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (17.7ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 50ms (Views: 28.1ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/carparks/5/edit" for ::1 at 2020-05-18 21:15:45 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (1.9ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 23.6ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/carparks/5" for ::1 at 2020-05-18 21:15:46 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ce0qL0LvXYBx0i9cfm+9cA/A5xn9cUW2tn6h3i4nCCXhowr6FxItSMslbMAfDdJPL4MO8xzEm5NooL5IYemxLg==", "commit"=>"Update Carpark", "id"=>"5"}
+  [1m[36mCarpark Load (1.1ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mCarpark Update (0.6ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 5], ["updated_at", "2020-05-18 13:15:46.616322"], ["id", 5]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:31
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:46 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/5" for ::1 at 2020-05-18 21:15:49 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:50 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/carparks/5" for ::1 at 2020-05-18 21:15:53 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ae0SYpRWrgNdrPihnVhhf47nDZvFzW8Mcrw7R78JO72BozK3wavey+dbuz38Og5ArqTkcSR4sSmsYiTR8MeCtg==", "id"=>"5"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:41
+  [1m[36mCarpark Update (0.5ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 4], ["updated_at", "2020-05-18 13:15:53.064652"], ["id", 5]]
+  ↳ app/controllers/carparks_controller.rb:41
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:41
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 21:15:53 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+

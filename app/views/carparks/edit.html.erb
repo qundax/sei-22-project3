@@ -1,0 +1,19 @@
+<h1>Aka tadan</h1>
+
+
+<h1>Confirmation</h1>
+
+<%= form_with scope: :carpark, model: @carpark, local: true do |form| %>
+
+  <p> Apply for season parking at <%= @carpark.location %> </p>
+
+
+  <p> Confirm?
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', carparks_path %>

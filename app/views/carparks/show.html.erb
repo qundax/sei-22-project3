@@ -1,0 +1,25 @@
+<p>
+  <strong>Location:</strong>
+  <%= @carpark.location %>
+</p>
+
+<p>
+  <strong>Photo url:</strong>
+  <%= @carpark.photo_url %>
+</p>
+
+
+<p>
+  <strong>Lots taken:</strong>
+  <%= @carpark.reservedlots %>
+</p>
+
+
+<p>
+  <strong>Lots remaining:</strong>
+  <%= @carpark.totallots - @carpark.reservedlots %>
+</p>
+
+
+
+<%= link_to 'Back', carparks_path %>

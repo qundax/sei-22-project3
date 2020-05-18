@@ -1,0 +1,24 @@
+<%= form_with scope: :carpark, url: carparks_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :location %><br>
+    <%= form.text_field :location %>
+  </p>
+
+  <p>
+    <%= form.label :totallots %><br>
+    <%= form.text_area :totallots %>
+  </p>
+
+  <p>
+    <%= form.label :photo_url %><br>
+    <%= form.text_area :photo_url %>
+  </p>
+
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+:location, :totallots, :photourl
