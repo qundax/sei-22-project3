@@ -1331,3 +1331,439 @@ Processing by CarparksController#index as HTML
 Completed 200 OK in 29ms (Views: 24.3ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (20.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Lots (20200518133551)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "lots" ("id" bigserial primary key, "lotNumber" character varying, "taken" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200518133551_lots.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (17.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200518133551"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCarparkToLots (20200518134539)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.8ms)[0m  [1m[35mALTER TABLE "lots" ADD "carpark_id" bigint[0m
+  ↳ db/migrate/20200518134539_add_carpark_to_lots.rb:3
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_lots_on_carpark_id" ON "lots"  ("carpark_id")[0m
+  ↳ db/migrate/20200518134539_add_carpark_to_lots.rb:3
+  [1m[35m (11.4ms)[0m  [1m[35mALTER TABLE "lots" ADD CONSTRAINT "fk_rails_fc7d8acb24"
+FOREIGN KEY ("carpark_id")
+  REFERENCES "carparks" ("id")
+[0m
+  ↳ db/migrate/20200518134539_add_carpark_to_lots.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200518134539"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7454056348614310050)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCarpark Load (0.9ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mLot Create (1.9ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R1"], ["created_at", "2020-05-18 13:51:10.288589"], ["updated_at", "2020-05-18 13:51:10.288589"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mLot Create (0.7ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R2"], ["created_at", "2020-05-18 13:51:10.293631"], ["updated_at", "2020-05-18 13:51:10.293631"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mLot Create (0.6ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R3"], ["created_at", "2020-05-18 13:51:10.296907"], ["updated_at", "2020-05-18 13:51:10.296907"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R4"], ["created_at", "2020-05-18 13:51:10.300070"], ["updated_at", "2020-05-18 13:51:10.300070"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mLot Create (1.0ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R5"], ["created_at", "2020-05-18 13:51:10.303235"], ["updated_at", "2020-05-18 13:51:10.303235"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R6"], ["created_at", "2020-05-18 13:51:10.306910"], ["updated_at", "2020-05-18 13:51:10.306910"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R7"], ["created_at", "2020-05-18 13:51:10.309927"], ["updated_at", "2020-05-18 13:51:10.309927"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R8"], ["created_at", "2020-05-18 13:51:10.312906"], ["updated_at", "2020-05-18 13:51:10.312906"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mLot Create (0.4ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R9"], ["created_at", "2020-05-18 13:51:10.315653"], ["updated_at", "2020-05-18 13:51:10.315653"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mLot Create (0.6ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R10"], ["created_at", "2020-05-18 13:51:10.318469"], ["updated_at", "2020-05-18 13:51:10.318469"], ["carpark_id", 2]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R1"], ["created_at", "2020-05-18 13:51:10.321555"], ["updated_at", "2020-05-18 13:51:10.321555"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R2"], ["created_at", "2020-05-18 13:51:10.324370"], ["updated_at", "2020-05-18 13:51:10.324370"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mLot Create (7.8ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R3"], ["created_at", "2020-05-18 13:51:10.327392"], ["updated_at", "2020-05-18 13:51:10.327392"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mLot Create (0.6ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R4"], ["created_at", "2020-05-18 13:51:10.339824"], ["updated_at", "2020-05-18 13:51:10.339824"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R5"], ["created_at", "2020-05-18 13:51:10.343092"], ["updated_at", "2020-05-18 13:51:10.343092"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R6"], ["created_at", "2020-05-18 13:51:10.346466"], ["updated_at", "2020-05-18 13:51:10.346466"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R7"], ["created_at", "2020-05-18 13:51:10.349392"], ["updated_at", "2020-05-18 13:51:10.349392"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R8"], ["created_at", "2020-05-18 13:51:10.352289"], ["updated_at", "2020-05-18 13:51:10.352289"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R9"], ["created_at", "2020-05-18 13:51:10.355532"], ["updated_at", "2020-05-18 13:51:10.355532"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R10"], ["created_at", "2020-05-18 13:51:10.358617"], ["updated_at", "2020-05-18 13:51:10.358617"], ["carpark_id", 3]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R1"], ["created_at", "2020-05-18 13:51:10.361694"], ["updated_at", "2020-05-18 13:51:10.361694"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mLot Create (0.4ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R2"], ["created_at", "2020-05-18 13:51:10.364449"], ["updated_at", "2020-05-18 13:51:10.364449"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R3"], ["created_at", "2020-05-18 13:51:10.367296"], ["updated_at", "2020-05-18 13:51:10.367296"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R4"], ["created_at", "2020-05-18 13:51:10.370622"], ["updated_at", "2020-05-18 13:51:10.370622"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R5"], ["created_at", "2020-05-18 13:51:10.373809"], ["updated_at", "2020-05-18 13:51:10.373809"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mLot Create (8.3ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R6"], ["created_at", "2020-05-18 13:51:10.376755"], ["updated_at", "2020-05-18 13:51:10.376755"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mLot Create (0.8ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R7"], ["created_at", "2020-05-18 13:51:10.389201"], ["updated_at", "2020-05-18 13:51:10.389201"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mLot Create (1.4ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R8"], ["created_at", "2020-05-18 13:51:10.393444"], ["updated_at", "2020-05-18 13:51:10.393444"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R9"], ["created_at", "2020-05-18 13:51:10.397571"], ["updated_at", "2020-05-18 13:51:10.397571"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R10"], ["created_at", "2020-05-18 13:51:10.400404"], ["updated_at", "2020-05-18 13:51:10.400404"], ["carpark_id", 4]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R1"], ["created_at", "2020-05-18 13:51:10.404232"], ["updated_at", "2020-05-18 13:51:10.404232"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R2"], ["created_at", "2020-05-18 13:51:10.407253"], ["updated_at", "2020-05-18 13:51:10.407253"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R3"], ["created_at", "2020-05-18 13:51:10.410163"], ["updated_at", "2020-05-18 13:51:10.410163"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R4"], ["created_at", "2020-05-18 13:51:10.413159"], ["updated_at", "2020-05-18 13:51:10.413159"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R5"], ["created_at", "2020-05-18 13:51:10.416127"], ["updated_at", "2020-05-18 13:51:10.416127"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R6"], ["created_at", "2020-05-18 13:51:10.419036"], ["updated_at", "2020-05-18 13:51:10.419036"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mLot Create (0.4ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R7"], ["created_at", "2020-05-18 13:51:10.421986"], ["updated_at", "2020-05-18 13:51:10.421986"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R8"], ["created_at", "2020-05-18 13:51:10.424984"], ["updated_at", "2020-05-18 13:51:10.424984"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (7.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mLot Create (1.0ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R9"], ["created_at", "2020-05-18 13:51:10.435996"], ["updated_at", "2020-05-18 13:51:10.435996"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mLot Create (0.6ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R10"], ["created_at", "2020-05-18 13:51:10.441440"], ["updated_at", "2020-05-18 13:51:10.441440"], ["carpark_id", 1]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R1"], ["created_at", "2020-05-18 13:51:10.445046"], ["updated_at", "2020-05-18 13:51:10.445046"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R2"], ["created_at", "2020-05-18 13:51:10.448142"], ["updated_at", "2020-05-18 13:51:10.448142"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R3"], ["created_at", "2020-05-18 13:51:10.451244"], ["updated_at", "2020-05-18 13:51:10.451244"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R4"], ["created_at", "2020-05-18 13:51:10.454629"], ["updated_at", "2020-05-18 13:51:10.454629"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R5"], ["created_at", "2020-05-18 13:51:10.457788"], ["updated_at", "2020-05-18 13:51:10.457788"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R6"], ["created_at", "2020-05-18 13:51:10.460784"], ["updated_at", "2020-05-18 13:51:10.460784"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R7"], ["created_at", "2020-05-18 13:51:10.463957"], ["updated_at", "2020-05-18 13:51:10.463957"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R8"], ["created_at", "2020-05-18 13:51:10.466991"], ["updated_at", "2020-05-18 13:51:10.466991"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mLot Create (0.6ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R9"], ["created_at", "2020-05-18 13:51:10.470379"], ["updated_at", "2020-05-18 13:51:10.470379"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mLot Create (0.5ms)[0m  [1m[32mINSERT INTO "lots" ("lotNumber", "created_at", "updated_at", "carpark_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["lotNumber", "R10"], ["created_at", "2020-05-18 13:51:10.473846"], ["updated_at", "2020-05-18 13:51:10.473846"], ["carpark_id", 5]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+Started GET "/carparks" for ::1 at 2020-05-18 21:53:54 +0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (1.0ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 287ms (Views: 263.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 21:53:56 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `lots' for nil:NilClass):
+    21: </p>
+    22: 
+    23: 
+    24:  <% @carparks.lots.each do |lot| %>
+    25: 
+    26:       <div><%= lot.lotNumber %></div>
+    27: <% end %>
+  
+app/views/carparks/show.html.erb:24:in `_app_views_carparks_show_html_erb___4409494423550359749_70248739995860'
+Started GET "/carparks/2" for ::1 at 2020-05-18 21:54:18 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  Rendered carparks/show.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `lots' for #<Carpark:0x00007fc819244df0>
+Did you mean?  lot
+               lot=):
+    21: </p>
+    22: 
+    23: 
+    24:  <% @carpark.lots.each do |lot| %>
+    25: 
+    26:       <div><%= lot.lotNumber %></div>
+    27: <% end %>
+  
+app/views/carparks/show.html.erb:24:in `_app_views_carparks_show_html_erb___4409494423550359749_70248695957660'
+Started GET "/carparks/2" for ::1 at 2020-05-18 21:54:35 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (11.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  [1m[36mLot Load (0.7ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/show.html.erb:24
+  Rendered carparks/show.html.erb within layouts/application (80.5ms)
+Completed 200 OK in 129ms (Views: 103.1ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 21:56:49 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/show.html.erb:24
+  Rendered carparks/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 33.2ms | ActiveRecord: 1.0ms)
+
+

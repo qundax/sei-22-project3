@@ -20,6 +20,18 @@
   <%= @carpark.totallots - @carpark.reservedlots %>
 </p>
 
+<p> For future use of lots </p>
+ <% @carpark.lot.each do |lot| %>
+
+      <div><%= lot.lotNumber %></div>
+      <% if lot.taken %>
+      	<div> Taken</div>
+      <% else %>
+      	<div>Not Taken</div>
+      	<% end %>
+<% end %>
+
+
 
       <% if @carpark.totallots - @carpark.reservedlots == 0 %>
       	<div>	No more season parking lots. Try again another time </div>

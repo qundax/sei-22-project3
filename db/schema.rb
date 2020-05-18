@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_18_081354) do
+ActiveRecord::Schema.define(version: 2020_05_18_134539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,4 +24,14 @@ ActiveRecord::Schema.define(version: 2020_05_18_081354) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "lots", force: :cascade do |t|
+    t.string "lotNumber"
+    t.boolean "taken", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "carpark_id"
+    t.index ["carpark_id"], name: "index_lots_on_carpark_id"
+  end
+
+  add_foreign_key "lots", "carparks"
 end
