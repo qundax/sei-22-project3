@@ -1767,3 +1767,1294 @@ Processing by CarparksController#show as HTML
 Completed 200 OK in 40ms (Views: 33.2ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/carparks/2" for ::1 at 2020-05-18 22:05:22 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  [1m[36mLot Load (0.6ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/show.html.erb:24
+  Rendered carparks/show.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 97ms (Views: 55.8ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:05:31 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:06:51 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 64ms (Views: 31.3ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/pins/1" for ::1 at 2020-05-18 22:07:45 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/pins/1"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/lots/1" for ::1 at 2020-05-18 22:07:58 +0800
+Processing by LotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lots_controller.rb:20
+  Rendering lots/show.html.erb within layouts/application
+  Rendered lots/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 54ms (Views: 20.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/lots/1" for ::1 at 2020-05-18 22:08:04 +0800
+Processing by LotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLot Load (0.6ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lots_controller.rb:20
+  Rendering lots/show.html.erb within layouts/application
+  Rendered lots/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 34.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lots/1" for ::1 at 2020-05-18 22:08:33 +0800
+Processing by LotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lots_controller.rb:20
+  Rendering lots/show.html.erb within layouts/application
+  Rendered lots/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 40.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lots/1" for ::1 at 2020-05-18 22:09:04 +0800
+Processing by LotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLot Load (0.8ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lots_controller.rb:20
+  Rendering lots/show.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lots/show.html.erb:3
+  Rendered lots/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 44ms (Views: 35.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/lots/1" for ::1 at 2020-05-18 22:09:12 +0800
+Processing by LotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLot Load (0.6ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lots_controller.rb:20
+  Rendering lots/show.html.erb within layouts/application
+  [1m[36mCarpark Load (6.0ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lots/show.html.erb:3
+  Rendered lots/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 44ms (Views: 31.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/lots/1" for ::1 at 2020-05-18 22:10:07 +0800
+Processing by LotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lots_controller.rb:20
+  Rendering lots/show.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/lots/show.html.erb:3
+  Rendered lots/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 33.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:16:30 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (1.0ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 24.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:16:32 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (1.1ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 42ms (Views: 32.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:19:29 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 80ms (Views: 35.1ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:19:31 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 25.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:19:32 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:19:32 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:21:40 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.7ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 76ms (Views: 57.0ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:22:52 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 96ms (Views: 50.4ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:22:53 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:23:02 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", true]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 57ms (Views: 25.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:25:50 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 93ms (Views: 48.5ms | ActiveRecord: 23.8ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:25:51 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cyqgiR7zouA6FrCXAaKwrMs/giPPr9mCpV541KrFKUKbZIBcSw7SKIDh8wtgwN+T63xryS4aB6d7gGdC5QuQSQ==", "carpark"=>{"lot_id"=>"1"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (1.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 181ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:26:34 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 85ms (Views: 41.6ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:26:34 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.6ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 35.8ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:26:35 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7cJXlLe+Zxk5Ce/H42zwWz/GdlsGjCNyJd2oAIkDsKwFjHdB4kMX0YP+rFuCDp9kH4Wfsec5/Vf7A7eWxs0Jpw==", "carpark"=>{"lot_id"=>"1"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (1.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 176ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:27:41 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 83ms (Views: 37.2ms | ActiveRecord: 19.6ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:27:44 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Lot without an ID):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:28:34 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (6.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 13.5ms)
+
+
+  
+NoMethodError (undefined method `carpark' for #<ActionController::Parameters:0x00007fc8185b7290>):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:29:32 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 226ms (ActiveRecord: 13.7ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:29:37 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 161ms (ActiveRecord: 0.8ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:29:43 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 213ms (ActiveRecord: 19.8ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:29:52 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 11.6ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:30:05 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 6.6ms)
+
+
+  
+NameError (undefined local variable or method `carpark' for #<CarparksController:0x00007fc81e4e66d0>
+Did you mean?  @carpark):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:30:26 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 404 Not Found in 33ms (ActiveRecord: 17.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Lot without an ID):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:30:36 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 12.2ms)
+
+
+  
+NameError (undefined local variable or method `carpark' for #<CarparksController:0x00007fc8192d7538>
+Did you mean?  @carpark):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:30:48 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 7.1ms)
+
+
+  
+NameError (undefined local variable or method `carpark' for #<CarparksController:0x00007fc81930fb40>
+Did you mean?  @carpark):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:31:08 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 6.9ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:32:03 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 199ms (ActiveRecord: 7.1ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:32:22 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 233ms (ActiveRecord: 12.6ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:32:53 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 213ms (ActiveRecord: 11.8ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:33:26 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.9ms)
+
+
+  
+NoMethodError (undefined method `lot_id' for <ActionController::Parameters {"lot_id"=>"2"} permitted: false>:ActionController::Parameters):
+  
+app/controllers/carparks_controller.rb:33:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:34:39 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 189ms (ActiveRecord: 6.6ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:34:44 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 162ms (ActiveRecord: 0.3ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:34:52 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"2"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 179ms (ActiveRecord: 7.0ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:34:58 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yp7zRjVPeEcm9cJNVAbERKsoeC/U7umiTnaF0Ku+TQfZFsYTShNKaZslJVUMnQuMu9ICl7mZYNX58WBDWBAPw==", "carpark"=>{"lot_id"=>"1"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (1.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 159ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:35:13 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 82ms (Views: 46.3ms | ActiveRecord: 8.6ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:35:17 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JKaalFcEebaDfkhlQ1JJ/uWAHIWkl0U+XaBcGpa7/uPM6LpBAvkJfjmJC/kiMCbBxcP1b0UimxuDfkOM2XVH6A==", "carpark"=>{"lot_id"=>"8"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (2.0ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 184ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:35:54 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 74ms (Views: 39.5ms | ActiveRecord: 13.9ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:35:57 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cHMzwekZSaZwzy/eBWG3Ul5vQignCkICc8mveM6aBAOYPRMUvOQ5bso4bEJkA9htfiyrwsa/nCetF7DugVS9CA==", "carpark"=>{"lot_id"=>"6"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (2.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.6ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 172ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:36:20 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 95ms (Views: 49.8ms | ActiveRecord: 21.2ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:36:22 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (1.1ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for #<Class:0x00007fc8184c3910>):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:36:42 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 15.6ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:37:08 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 24.8ms)
+
+
+  
+NoMethodError (undefined method `value' for <ActionController::Parameters {"lot_id"=>"4"} permitted: false>:ActionController::Parameters
+Did you mean?  value?
+               values):
+  
+app/controllers/carparks_controller.rb:33:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:37:19 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 13.2ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:37:30 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 7.9ms)
+
+
+  
+NoMethodError (undefined method `to_i' for ["4"]:Array
+Did you mean?  to_s
+               to_a
+               to_h):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:37:58 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 404 Not Found in 34ms (ActiveRecord: 19.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Lot with 'id'=["4"]):
+  
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:38:23 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 14.2ms)
+
+
+  
+TypeError (wrong element type String at 0 (expected array)):
+  
+app/controllers/carparks_controller.rb:32:in `to_h'
+app/controllers/carparks_controller.rb:32:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:38:36 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 21.7ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:38:50 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 14.7ms)
+
+
+  
+NoMethodError (undefined method `type' for ["4"]:Array):
+  
+app/controllers/carparks_controller.rb:33:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:39:08 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 18.7ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:39:23 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (6.6ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 20.7ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:40:08 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 15.3ms)
+
+
+  
+NoMethodError (undefined method `lotNumber' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:35:in `update'
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:40:28 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cir61ARw2HgDLtz2GqkIhQgsROmBWWa48gDqjGSk2cjiZNoBUY2osLnZn2p7y2e6KG+tA2DsuJ0s3vUaK2pgww==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 201ms (ActiveRecord: 27.1ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:40:32 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (1.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 40ms (Views: 30.5ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:40:34 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ngOOQ6iyHyXTUukOVGncm1MTu+99DFcICUAZUH/QRtR2Ta6W/U9v7WmlqpI1C7Okc1BSBZy5iS3XngbGMB7/3w==", "carpark"=>{"lot_id"=>"4"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (1.8ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+No template found for CarparksController#update, rendering head :no_content
+Completed 204 No Content in 163ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:41:32 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 22:41:33 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/show.html.erb:24
+  Rendered carparks/show.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 56ms (Views: 37.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:41:37 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/carparks/2" for ::1 at 2020-05-18 22:41:40 +0800
+Processing by CarparksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LkDxD0kJ0DckfTh1QPIQ8znALJGlUWXoDSkQzs7O6CLGDtHaHPSg/56Ke+khkH/MGYPFe0Tku83T9w9YgQBRKQ==", "carpark"=>{"lot_id"=>"9"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:31
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:37
+  [1m[36mCarpark Update (0.9ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 1], ["updated_at", "2020-05-18 14:41:40.250430"], ["id", 2]]
+  ↳ app/controllers/carparks_controller.rb:37
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:37
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:38
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:38
+  [1m[36mLot Update (0.7ms)[0m  [1m[33mUPDATE "lots" SET "taken" = $1, "updated_at" = $2 WHERE "lots"."id" = $3[0m  [["taken", true], ["updated_at", "2020-05-18 14:41:40.258930"], ["id", 9]]
+  ↳ app/controllers/carparks_controller.rb:38
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:38
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 17ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:41:40 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (7.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 38ms (Views: 26.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 22:41:42 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.7ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  [1m[36mLot Load (0.7ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/show.html.erb:24
+  Rendered carparks/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 39ms (Views: 31.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:44:10 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:44:55 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.9ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (3.1ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 40ms (Views: 30.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:45:37 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:51:30 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  Rendered carparks/edit.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 15.2ms)
+
+
+  
+SyntaxError (/Users/kenneththesheep/wdi/sandbox/project/project_3/season/sei-22-project3/app/views/carparks/edit.html.erb:34: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/carparks/edit.html.erb:34: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:51:54 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.7ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (277.2ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fc819b83650>:0x00007fc819a7d738>
+Did you mean?  for
+               fork):
+    23:   <p> Register?
+    24:   </p>
+    25:   <p>
+    26:     <%= form.submit %>
+    27:   </p>
+    28:   <% end %>
+    29: 
+  
+app/views/carparks/edit.html.erb:26:in `block in _app_views_carparks_edit_html_erb___3760899432361905056_70248700309560'
+app/views/carparks/edit.html.erb:20:in `_app_views_carparks_edit_html_erb___3760899432361905056_70248700309560'
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:52:05 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.7ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 51ms (Views: 42.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:52:15 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/carparks/2" for ::1 at 2020-05-18 22:52:16 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gJl957Xnnp/X6bhLc0R4wEddxOp+mccTrpkJctT44pBo110y4BruV20e+9cSJhf/Zx4tAJ8sGTZwRxbkmzZbmw==", "commit"=>"Update Carpark", "id"=>"2"}
+No template found for CarparksController#destroy, rendering head :no_content
+Completed 204 No Content in 164ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:52:38 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:52:44 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 41ms (Views: 33.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:54:19 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lot Load (0.0ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lot Load (0.0ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lot Load (0.0ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lot Load (0.0ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lot Load (0.0ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lot Load (0.0ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Lot Load (0.0ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2 LIMIT $3[0m  [["carpark_id", 2], ["taken", true], ["LIMIT", 11]]
+  ↳ /Users/kenneththesheep/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendered carparks/edit.html.erb within layouts/application (294.1ms)
+Completed 500 Internal Server Error in 337ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fc819b8bb20>:0x00007fc819b89320>
+Did you mean?  for
+               fork):
+    19: 
+    20: <%= form_for @carpark, method: :delete do |f| %>
+    21: 
+    22: <%= form.collection_select :lot_id, @usedlots, :id, :lotNumber %>
+    23:   <p> Delete?
+    24:   </p>
+    25:   <p>
+  
+app/views/carparks/edit.html.erb:22:in `block in _app_views_carparks_edit_html_erb___3760899432361905056_70248736506440'
+app/views/carparks/edit.html.erb:20:in `_app_views_carparks_edit_html_erb___3760899432361905056_70248736506440'
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:55:05 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  Rendered carparks/edit.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `lot_id' for #<Carpark:0x00007fc819abfbd8>
+Did you mean?  lot_ids
+               lot_ids=):
+    19: 
+    20: <%= form_for @carpark, method: :delete do |f| %>
+    21: 
+    22: <%= f.collection_select :lot_id, @usedlots, :id, :lotNumber %>
+    23:   <p> Delete?
+    24:   </p>
+    25:   <p>
+  
+app/views/carparks/edit.html.erb:22:in `block in _app_views_carparks_edit_html_erb___3760899432361905056_70248700450420'
+app/views/carparks/edit.html.erb:20:in `_app_views_carparks_edit_html_erb___3760899432361905056_70248700450420'
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:56:35 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "lots"."id" FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/edit.html.erb:22
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", true]]
+  ↳ app/views/carparks/edit.html.erb:22
+  Rendered carparks/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 41ms (Views: 33.2ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/carparks/2" for ::1 at 2020-05-18 22:56:50 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kUHuiqGh+Z2/QrmvNjLMV9H/GE+yDRq+D/vi55GEc3p5D85f9FyJVQW1+jNXUKNo8bzxpVO4xJvRJf1x3krKcQ==", "carpark"=>{"lot_ids"=>"9"}, "commit"=>"Update Carpark", "id"=>"2"}
+No template found for CarparksController#destroy, rendering head :no_content
+Completed 204 No Content in 146ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:57:45 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "lots"."id" FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/edit.html.erb:22
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", true]]
+  ↳ app/views/carparks/edit.html.erb:22
+  Rendered carparks/edit.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 62ms (Views: 31.9ms | ActiveRecord: 13.8ms)
+
+
+Started DELETE "/carparks/2" for ::1 at 2020-05-18 22:57:47 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bv2TLwnlcc0oPK+bE3I6ONBcTeN99K82HqBq10b1QKSGs7P6XBgBBZLL7AdyEFUH8B+kCZxBcRPAfnVBCTv5rw==", "carpark"=>{"lot_ids"=>"9"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mLot Load (0.6ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:49
+No template found for CarparksController#destroy, rendering head :no_content
+Completed 204 No Content in 156ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:58:24 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.2ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "lots"."id" FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/edit.html.erb:22
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", true]]
+  ↳ app/views/carparks/edit.html.erb:22
+  Rendered carparks/edit.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 63ms (Views: 33.7ms | ActiveRecord: 12.9ms)
+
+
+Started DELETE "/carparks/2" for ::1 at 2020-05-18 22:58:27 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANdBCfARgJSSTm8MHy4nxKxsX1+YBGCkDu6CDpiuUcHomWHcpezwXCi5LJB+TEj7jC+2tXmxvoHQMJ2Y12Doyg==", "carpark"=>{"lot_ids"=>"9"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mLot Load (1.5ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:49
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:51
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[36mCarpark Update (1.1ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 0], ["updated_at", "2020-05-18 14:58:27.872996"], ["id", 2]]
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:53
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:53
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 25ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:58:27 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 30.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/carparks/2" for ::1 at 2020-05-18 22:58:30 +0800
+Processing by CarparksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:19
+  Rendering carparks/show.html.erb within layouts/application
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/show.html.erb:24
+  Rendered carparks/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 30.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 22:58:32 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.9ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "lots"."id" FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/edit.html.erb:22
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", true]]
+  ↳ app/views/carparks/edit.html.erb:22
+  Rendered carparks/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 52ms (Views: 43.5ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/carparks/2" for ::1 at 2020-05-18 22:58:36 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XW0WF9GxpV24oYJr4fUwxIVZ/P0tjn//sHW9asUMX2e1IzbChEzVlQJWwfeAl1/7pRoVF8w7odpuq6L8isLmbA==", "carpark"=>{"lot_ids"=>"9"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mLot Load (1.4ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:49
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[36mCarpark Update (0.6ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", -1], ["updated_at", "2020-05-18 14:58:36.669549"], ["id", 2]]
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:53
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:53
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:53
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 16ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:58:36 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 22:58:52 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.5ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 40ms (Views: 28.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 23:00:29 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 47ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 23:00:33 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "lots"."id" FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/edit.html.erb:22
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", true]]
+  ↳ app/views/carparks/edit.html.erb:22
+  Rendered carparks/edit.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 68ms (Views: 36.1ms | ActiveRecord: 8.6ms)
+
+
+Started DELETE "/carparks/2" for ::1 at 2020-05-18 23:00:54 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lkh8ROPx1ou19WVHy4Rq7ZGxrdKQUcle8AQ2F31TPHnGBlyRtgymQw8CJtuq5gXSsfJEOHHkF3su2imBMp2Fcg==", "carpark"=>{"lot_ids"=>"9"}, "commit"=>"Update Carpark", "id"=>"2"}
+  [1m[36mLot Load (0.5ms)[0m  [1m[34mSELECT  "lots".* FROM "lots" WHERE "lots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:49
+  [1m[36mCarpark Load (0.3ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[36mCarpark Update (0.5ms)[0m  [1m[33mUPDATE "carparks" SET "reservedlots" = $1, "updated_at" = $2 WHERE "carparks"."id" = $3[0m  [["reservedlots", 0], ["updated_at", "2020-05-18 15:00:54.604282"], ["id", 2]]
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carparks_controller.rb:53
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:53
+  [1m[36mLot Update (0.6ms)[0m  [1m[33mUPDATE "lots" SET "taken" = $1, "updated_at" = $2 WHERE "lots"."id" = $3[0m  [["taken", false], ["updated_at", "2020-05-18 15:00:54.611439"], ["id", 9]]
+  ↳ app/controllers/carparks_controller.rb:53
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carparks_controller.rb:53
+Redirected to http://localhost:3000/carparks
+Completed 302 Found in 16ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/carparks" for ::1 at 2020-05-18 23:00:54 +0800
+Processing by CarparksController#index as HTML
+  Rendering carparks/index.html.erb within layouts/application
+  [1m[36mCarpark Load (0.4ms)[0m  [1m[34mSELECT "carparks".* FROM "carparks"[0m
+  ↳ app/views/carparks/index.html.erb:6
+  Rendered carparks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carparks/2/edit" for ::1 at 2020-05-18 23:00:57 +0800
+Processing by CarparksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCarpark Load (0.6ms)[0m  [1m[34mSELECT  "carparks".* FROM "carparks" WHERE "carparks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/carparks_controller.rb:24
+  Rendering carparks/edit.html.erb within layouts/application
+  [1m[36mLot Load (0.4ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", false]]
+  ↳ app/views/carparks/edit.html.erb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "lots"."id" FROM "lots" WHERE "lots"."carpark_id" = $1[0m  [["carpark_id", 2]]
+  ↳ app/views/carparks/edit.html.erb:22
+  [1m[36mLot Load (0.3ms)[0m  [1m[34mSELECT "lots".* FROM "lots" WHERE "lots"."carpark_id" = $1 AND "lots"."taken" = $2[0m  [["carpark_id", 2], ["taken", true]]
+  ↳ app/views/carparks/edit.html.erb:22
+  Rendered carparks/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 39ms (Views: 30.5ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/carparks/2" for ::1 at 2020-05-18 23:01:00 +0800
+Processing by CarparksController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GgV/11ZCC2hl2sTtUxiU6xZ5JMEBpzmmootqAAWHhKHyS18CA797oN8th3EyevvUNjrNK+AS54N8VXWWSkk9qg==", "commit"=>"Update Carpark", "id"=>"2"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `values' for nil:NilClass):
+  
+app/controllers/carparks_controller.rb:49:in `destroy'

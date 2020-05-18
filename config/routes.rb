@@ -10,4 +10,14 @@ Rails.application.routes.draw do
   get '/carparks/:id/edit' => 'carparks#edit', as: 'edit_carpark'
   patch '/carparks/:id' => 'carparks#update'
   delete '/carparks/:id' => 'carparks#destroy'
+
+  get '/lots' => 'lots#index', as: 'lots'
+  get '/lots/new' => 'lots#new', as: 'new_lot'
+  post '/lots' => 'lots#create'
+  get '/lots/:id' => 'lots#show' , as: 'lot'
+  get '/lots/:id/edit' => 'lots#edit', as: 'edit_lot'
+  patch '/lots/:id' => 'lots#update'
+  delete '/lots/:id' => 'lots#destroy'
+
+
 end
