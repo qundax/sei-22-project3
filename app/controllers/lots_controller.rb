@@ -42,7 +42,11 @@ end
       #puts "does exist"
       #  @boardfollowee = Boardfollowee.find_by user_id: current_user.id, boardfollowee_id: params[:id]
       @lot = Lot.find(params[:id])
+
+
+
       @lot.destroy
+
       redirect_to carparks_path
       # @carpark.update(reservedlots: @carpark.reservedlots-1)
       # redirect_to carparks_path
