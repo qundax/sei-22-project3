@@ -1,0 +1,62 @@
+<p>
+  <strong>Location:</strong>
+  <%= @carpark.location %>
+</p>
+
+<p>
+  <strong>Photo url:</strong>
+  <%= @carpark.photo_url %>
+</p>
+
+
+<p>
+  <strong>Lots taken:</strong>
+  <%= @carpark.reservedlots %>
+</p>
+
+
+<p>
+  <strong>Lots remaining:</strong>
+  <%= @carpark.totallots - @carpark.reservedlots %>
+</p>
+
+
+ <% @carpark.lot.each do |lot| %>
+
+      <div><%= lot.lotNumber %></div>
+      <% if lot.taken %>
+      	<div> Taken</div>
+      <% else %>
+      	<div>Not Taken</div>
+      	<% end %>
+<% end %>
+
+<div><%= link_to 'View lot', lots_path %></div>
+<div><%= link_to 'New lot', new_lot_path %></div>
+
+      <% if @carpark.totallots - @carpark.reservedlots == 0 %>
+      	<div>	No more season parking lots. Try again another time </div>
+      	 <div class="col-3">
+      		<p><%= link_to 'Remove application for season parking', carpark_path(@carpark),
+        	method: :delete,
+        	data: { confirm: 'Are you sure?' } %></p>
+      	</div>
+
+      <% elsif @carpark.reservedlots == 0 %>
+      	<div><%= link_to 'Apply for season parking', edit_carpark_path(@carpark) %></div>
+      	    		 <div class="col-3">
+      <% else %>
+
+
+
+
+      	<div><%= link_to 'Apply for season parking', edit_carpark_path(@carpark) %></div>
+      	    		 <div class="col-3">
+      		<p><%= link_to 'Remove application for season parking', carpark_path(@carpark),
+        	method: :delete,
+        	data: { confirm: 'Are you sure?' } %></p>
+      	</div>
+      	<% end %>
+
+
+<%= link_to 'Back', carparks_path %>

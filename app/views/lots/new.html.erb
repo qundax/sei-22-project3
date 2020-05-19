@@ -1,0 +1,15 @@
+<%= form_with scope: :lot, url: lots_path, local: true do |form| %>
+
+
+
+
+  <p>
+    <%= form.label :lotNumber %><br>
+    <%= form.text_area :lotNumber %>
+  </p>
+
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
