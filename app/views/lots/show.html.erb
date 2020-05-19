@@ -2,7 +2,9 @@
 <p>Lot Number : <%= @lot.lotNumber %></p>
 <p>Carpark location : <%= @lot.carpark.location %> </p>
 <% if @lot.taken %>
-	<p>Taken</p>
+	<p>Taken by car plate: <%= @lot.vehicle.license_plate %></p>
 	<% else %>
 	<p>Not taken</p>
 	<% end %>
+
+<h1>Summon infrit to destroy the illegal car</h1>
