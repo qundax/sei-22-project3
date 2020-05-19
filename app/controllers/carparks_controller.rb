@@ -5,7 +5,7 @@ class CarparksController < ApplicationController
     @lots = Lot.where.not(vehicle_id: nil)
     puts @lots.inspect
     @lots.each do |lot|
-      #calculation in seconds
+      #calculation in seconds. Will use a conditional to remove user id and vehicle id from lots
       puts lot.lotNumber
       puts lot.updated_at
       puts Time.new.utc
