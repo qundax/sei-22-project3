@@ -2,6 +2,19 @@ class CarparksController < ApplicationController
 
   def index
     @carparks = Carpark.all
+    @lots = Lot.where.not(vehicle_id: nil)
+    puts @lots.inspect
+    @lots.each do |lot|
+      #calculation in seconds
+      puts lot.lotNumber
+      puts lot.updated_at
+      puts Time.new.utc
+      puts Time.new.utc - lot.updated_at
+
+    end
+
+
+
   end
 
 
