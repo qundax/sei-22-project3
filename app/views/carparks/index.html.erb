@@ -1,0 +1,35 @@
+<h1>Hello to shinra carpark</h1>
+
+
+<div><%= link_to 'New carpark', new_carpark_path %></div>
+<br/>
+  <% @carparks.each do |carpark| %>
+
+      <div><%= carpark.location %></div>
+      <div><%= link_to 'Show', carpark_path(carpark) %></div>
+
+
+      <% if carpark.totallots - carpark.reservedlots == 0 %>
+      	<div>	No more season parking lots. Try again another time </div>
+      	 <div class="col-3">
+      		<p><%= link_to 'Remove application for season parking', carpark_path(carpark),
+        	method: :delete,
+        	data: { confirm: 'Are you sure?' } %></p>
+      	</div>
+
+      <% elsif carpark.reservedlots == 0 %>
+      	<div><%= link_to 'Apply for season parking', edit_carpark_path(carpark) %></div>
+      	    		 <div class="col-3">
+      <% else %>
+
+      	<div><%= link_to 'Apply for season parking', edit_carpark_path(carpark) %></div>
+      	    		 <div class="col-3">
+      		<p><%= link_to 'Remove application for season parking', carpark_path(carpark),
+        	method: :delete,
+        	data: { confirm: 'Are you sure?' } %></p>
+      	</div>
+      	<% end %>
+      	<br/>
+      	<br/>
+
+  <% end %>
