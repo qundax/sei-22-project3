@@ -1,0 +1,15 @@
+<h2>Edit Vehicle Details</h2>
+<%= form_with scope: :vehicle, model: @vehicle, local: true do |form| %>
+	<p>
+		<%= form.label :license_plate %><br>
+		<%= form.text_field :license_plate %>
+	</p>
+	<p>
+		<%= form.label :vehicle_model %><br>
+		<%= form.text_field :vehicle_model %>
+	</p>
+	<p>
+		<%= form.submit %>
+		<%= link_to 'Back', vehicles_path %>
+	</p>
+<% end %>

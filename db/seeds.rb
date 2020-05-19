@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# vehicle1 = Vehicle.create!(license_plate:"SFX1386H", vehicle_model:"Honda")
+# vehicle2 = Vehicle.create!(license_plate:"SJG6768Z", vehicle_model:"Toyota")
+# vehicle3 = Vehicle.create!(license_plate:"SGP2756Y", vehicle_model:"Mercedes")
+
+#vehicle1 = Vehicle.create!(user_id:1,license_plate:"SFX1386H", vehicle_model:"Honda")
+#vehicle2 = Vehicle.create!(user_id:2, license_plate:"SJG6768Z", vehicle_model:"Toyota")
+#vehicle3 = Vehicle.create!(user_id:3,license_plate:"SGP2756Y", vehicle_model:"Mercedes")
 
 # ascencio = Carpark.create(
 #   :location => 'Ascencio', :totallots => 10, :photo_url=> 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg'
@@ -29,17 +36,17 @@
 
 
 
-carparks = Carpark.all
-carparks.each do |carpark|
+# carparks = Carpark.all
+# carparks.each do |carpark|
 
-    carpark.lot.create({lotNumber: 'R1'})
-    carpark.lot.create({lotNumber: 'R2'})
-    carpark.lot.create({lotNumber: 'R3'})
-    carpark.lot.create({lotNumber: 'R4'})
-    carpark.lot.create({lotNumber: 'R5'})
-    carpark.lot.create({lotNumber: 'R6'})
-    carpark.lot.create({lotNumber: 'R7'})
-    carpark.lot.create({lotNumber: 'R8'})
-    carpark.lot.create({lotNumber: 'R9'})
-    carpark.lot.create({lotNumber: 'R10'})
-end
+#     carpark.lot.create({lotNumber: 'R1'})
+#     carpark.lot.create({lotNumber: 'R2'})
+#     carpark.lot.create({lotNumber: 'R3'})
+#     carpark.lot.create({lotNumber: 'R4'})
+#     carpark.lot.create({lotNumber: 'R5'})
+#     carpark.lot.create({lotNumber: 'R6'})
+#     carpark.lot.create({lotNumber: 'R7'})
+#     carpark.lot.create({lotNumber: 'R8'})
+#     carpark.lot.create({lotNumber: 'R9'})
+#     carpark.lot.create({lotNumber: 'R10'})
+# end

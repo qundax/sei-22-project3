@@ -1,0 +1,27 @@
+<h2>All vehicles</h2>
+<%= link_to 'New Vehicle', new_vehicle_path %>
+<br>
+<table>
+	<thead>
+		<tr>
+			<th>Car Park</th>
+			<th>Parking Lot</th>
+			<th>License Plate</th>
+			<th>Vehicle Model</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @vehicles.each do |vehicle| %>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><%= link_to vehicle.license_plate, vehicle_path(vehicle) %></td>
+				<td><%= vehicle.vehicle_model %></td>
+				<td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+				<td><%= link_to 'Delete', vehicle_path(vehicle), method: :delete, data: {confirm: 'Are you sure?' } %></td>
+			</tr>
+			<% end %>
+	</tbody>
+</table>
