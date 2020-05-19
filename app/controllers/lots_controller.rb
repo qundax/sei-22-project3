@@ -1,7 +1,8 @@
 class LotsController < ApplicationController
 
   def index
-
+    @carpark = Carpark.find(params[:id])
+    puts @carpark.lot.count
   end
 
 
@@ -11,8 +12,11 @@ class LotsController < ApplicationController
 
   def create
     @lot = Lot.new(lot_params)
-
+    puts " i have entered here"
+    @carpark = Carpark.find(params[:id])
+    @lot.carpark = @carpark
     @lot.save
+    @carpark.update(totallots: @carpark.lot.count)
     redirect_to @lot
   end
 
@@ -22,19 +26,24 @@ class LotsController < ApplicationController
   end
 
 def edit
+  @lot = Lot.find(params[:id])
 
+  puts "in the edit path"
 end
 
 def update
-
-
+@lot = Lot.find(params[:id])
+@lot.update(lot_params)
+redirect_to @lot
 end
 
   def destroy
       #if Boardfollowee.exists?(user_id: current_user.id, boardfollowee_id: params[:id] )
       #puts "does exist"
       #  @boardfollowee = Boardfollowee.find_by user_id: current_user.id, boardfollowee_id: params[:id]
-      # @carpark = Carpark.find(params[:id])
+      @lot = Lot.find(params[:id])
+      @lot.destroy
+      redirect_to carparks_path
       # @carpark.update(reservedlots: @carpark.reservedlots-1)
       # redirect_to carparks_path
     #else

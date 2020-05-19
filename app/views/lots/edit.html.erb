@@ -1,0 +1,14 @@
+<%= form_with scope: :lot,model: @lot, local: true do |form| %>
+
+  <p>
+    <%= form.label :lotNumber %><br>
+    <%= form.text_field :lotNumber %>
+  </p>
+
+
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', lots_path %>

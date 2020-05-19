@@ -1,0 +1,16 @@
+<h1>lots page </h1>
+<h2>Location <%= @carpark.location %></h2>
+
+ <% @carpark.lot.each do |lot| %>
+
+      <div><%= lot.lotNumber %></div>
+      <% if lot.taken %>
+      	<div> Taken</div>
+      <% else %>
+      	<div>Not Taken</div>
+      	<% end %>
+      	<div><%= link_to 'Edit Lot', edit_lot_path(lot) %></div>
+      	<p><%= link_to 'Remove lot', lot_path(lot),
+        	method: :delete,
+        	data: { confirm: 'Are you sure?' } %></p>
+<% end %>

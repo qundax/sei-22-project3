@@ -67,7 +67,7 @@ end
 private
 
   def carpark_params
-    params.require(:carpark).permit(:location, :totallots, :photourl)
+    params.require(:carpark).permit(:location, :totallots, :photo_url)
   end
 
 end
