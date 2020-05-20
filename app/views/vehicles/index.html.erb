@@ -1,27 +1,44 @@
+<% if user_signed_in? %>
+	Welcome <%= current_user.email %>
+	<%= link_to 'log out', destroy_user_session_url, method: :delete %>
+<% else %>
+	<%= link_to 'log in', new_user_session_url %>
+<% end %>
+
 <h2>All vehicles</h2>
 <%= link_to 'New Vehicle', new_vehicle_path %>
 <br>
 <table>
 	<thead>
 		<tr>
-			<th>Car Park</th>
-			<th>Parking Lot</th>
 			<th>License Plate</th>
 			<th>Vehicle Model</th>
 			<th>Edit</th>
 			<th>Delete</th>
+			<th>Carpark</th>
+			<% @vehicles.each do |vehicle| %>
+				<% if vehicle.lot.present? %>
+					<th>Lot Number</th>
+				<% end %>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>
 		<% @vehicles.each do |vehicle| %>
 			<tr>
-				<td></td>
-				<td></td>
 				<td><%= link_to vehicle.license_plate, vehicle_path(vehicle) %></td>
 				<td><%= vehicle.vehicle_model %></td>
 				<td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
 				<td><%= link_to 'Delete', vehicle_path(vehicle), method: :delete, data: {confirm: 'Are you sure?' } %></td>
+				<% if vehicle.lot.present? %>
+					<% vehicle.lot.each do |lot| %>
+						<td><%= link_to lot.carpark.location, carpark_path(lot.carpark) %></td>
+						<td><%= lot.lotNumber %></td>
+					<% end %>
+				<% else %>
+					<td><%= link_to 'Register', carparks_path %></td>
+				<% end %>
 			</tr>
-			<% end %>
+		<% end %>
 	</tbody>
 </table>

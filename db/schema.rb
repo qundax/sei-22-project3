@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 2020_05_20_025456) do
   create_table "vehicles", force: :cascade do |t|
     t.string "license_plate"
     t.string "vehicle_model"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
   add_foreign_key "lots", "carparks"

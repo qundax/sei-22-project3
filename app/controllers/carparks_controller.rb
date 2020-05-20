@@ -36,7 +36,7 @@ class CarparksController < ApplicationController
 
 def edit
   @carpark = Carpark.find(params[:id])
-  @vehicles = Vehicle.all
+  @vehicles = Vehicle.all.where(:user_id => current_user)
   @lots = @carpark.lot.where(taken: false)
   @usedlots = @carpark.lot.where(taken: true)
   puts "in the edit path"
