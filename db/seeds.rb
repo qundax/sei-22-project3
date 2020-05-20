@@ -50,3 +50,33 @@
 #     carpark.lot.create({lotNumber: 'R9'})
 #     carpark.lot.create({lotNumber: 'R10'})
 # end
+
+
+ rafflesplace = Region.create(
+   :regionname => 'Raffles Place', :postalcode => '01'
+)
+
+ cecil = Region.create(
+   :regionname => 'Cecil', :postalcode => '02'
+)
+
+  marina1 = Region.create(
+   :regionname => 'Marina 1', :postalcode => '03'
+)
+  marina2 = Region.create(
+   :regionname => 'Marina 2', :postalcode => '04'
+)
+
+  peoplepark1 = Region.create(
+   :regionname => 'People Park 1', :postalcode => '05'
+)
+  peoplepark2 = Region.create(
+   :regionname => 'People Park 2', :postalcode => '06'
+)
+
+  anson = Region.create(
+   :regionname => 'Anson', :postalcode => '07'
+)
+  tanjongPagar = Region.create(
+   :regionname => 'Tanjong Pagar', :postalcode => '08'
+)
