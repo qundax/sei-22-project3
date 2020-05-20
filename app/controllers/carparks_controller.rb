@@ -2,6 +2,8 @@ class CarparksController < ApplicationController
 
   def index
     @carparks = Carpark.all
+    @regions = Region.all
+    @regions = @regions.order("regionname")
     @lots = Lot.where.not(vehicle_id: nil)
     puts @lots.inspect
     @lots.each do |lot|

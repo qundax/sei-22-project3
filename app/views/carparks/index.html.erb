@@ -10,16 +10,30 @@
 	</div>
 </div>
 <div class ="row">
-	<div class="col-12 text-center border">
+	<div class="col-4 text-center border">
 <div><%= link_to 'New carpark', new_carpark_path %></div>
 </div>
+	<div class="col-4 text-right my-auto	">
+		<p>Find region: </p>
 </div>
+	<div class="col-4 text-center classname border">
+		<% @regions.each do |region| %>
+
+		<div><%= link_to region.regionname, region_path(region) %></div>
+		<% end %>
+</div>
+</div>
+
+
+
+
+
 <div class="row">
 <br/>
   <% @carparks.each do |carpark| %>
   		<div class="col-3 border">
-      <div><%= carpark.location %></div>
-      <div><%= carpark.region.regionname %></div>
+      <div>Carpark name: <%= carpark.location %></div>
+      <div>Region: <%= carpark.region.regionname %></div>
       <div><%= link_to 'Show', carpark_path(carpark) %></div>
 
 
