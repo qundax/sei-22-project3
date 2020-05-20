@@ -2,14 +2,30 @@
 
 
 <h1>Confirmation</h1>
-
+<br>
+<% if @carpark.errors.any? %>
+  <div id="error_explanation">
+    <h5 class="text-danger">
+      <%= pluralize(@carpark.errors.count, "error") %> occurred:
+    </h5>
+    <ul>
+      <% @carpark.errors.full_messages.each do |msg| %>
+        <li class="text-danger"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= form_with scope: :carpark, model: @carpark, local: true do |form| %>
 
   <p> Apply for season parking at <%= @carpark.location %> </p>
 
-  <%= form.collection_select :lot_id, @lots, :id, :lotNumber %>
-
-   <%= form.collection_select :vehicle_id, @vehicles, :id, :license_plate %>
+  <% @usedlots.each do |usedlot| %>
+  	<% if usedlot.vehicle.user.id == current_user.id && usedlot.carpark_id == params[:id].to_i %>
+  		<p>*Vehicle <strong><%= usedlot.vehicle.license_plate %></strong> has a valid season parking lot <strong>(<%= usedlot.lotNumber %>)</strong> at this carpark.</p>
+  	<% end %>
+		<%= form.collection_select :lot_id, @lots, :id, :lotNumber %>
+		<%= form.collection_select :vehicle_id, @vehicles, :id, :license_plate %>
+  <% end %>
 
   <p> Register?
   </p>

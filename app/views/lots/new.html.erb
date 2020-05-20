@@ -1,7 +1,16 @@
 <%= form_with scope: :lot, url: lots_path, local: true do |form| %>
-
-
-
+	<% if @lot.errors.any? %>
+	  <div id="error_explanation">
+	    <h5 class="text-danger">
+	      <%= pluralize(@lot.errors.count, "error") %> occurred:
+	    </h5>
+	    <ul>
+	      <% @lot.errors.full_messages.each do |msg| %>
+	        <li class="text-danger"><%= msg %></li>
+	      <% end %>
+	    </ul>
+	  </div>
+	<% end %>
 
   <p>
     <%= form.label :lotNumber %><br>

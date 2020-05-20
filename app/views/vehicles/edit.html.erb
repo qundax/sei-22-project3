@@ -1,5 +1,18 @@
 <h2>Edit Vehicle Details</h2>
 <%= form_with scope: :vehicle, model: @vehicle, local: true do |form| %>
+	<br>
+	<% if @vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h5 class="text-danger">
+        <%= pluralize(@vehicle.errors.count, "error") %> occurred:
+      </h5>
+      <ul>
+        <% @vehicle.errors.full_messages.each do |msg| %>
+          <li class="text-danger"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 	<p>
 		<%= form.label :license_plate %><br>
 		<%= form.text_field :license_plate %>
