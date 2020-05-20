@@ -19,6 +19,7 @@ class CarparksController < ApplicationController
 
 
   def new
+    @regions = Region.all
   end
 
   def create
@@ -98,7 +99,7 @@ end
 private
 
   def carpark_params
-    params.require(:carpark).permit(:location, :totallots, :photo_url)
+    params.require(:carpark).permit(:location, :totallots, :photo_url, :region_id)
   end
 
 end

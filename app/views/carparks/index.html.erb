@@ -19,6 +19,7 @@
   <% @carparks.each do |carpark| %>
   		<div class="col-3 border">
       <div><%= carpark.location %></div>
+      <div><%= carpark.region.regionname %></div>
       <div><%= link_to 'Show', carpark_path(carpark) %></div>
 
 
