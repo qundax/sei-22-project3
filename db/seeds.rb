@@ -344,7 +344,7 @@
 
 
 ascencio = Carpark.create(
-  :location => 'Ascencio', :totallots => 10, :photo_url=> 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg', :region_id=>3
+  :location => 'Ascencio', :totallots => 10, :photo_url=> 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg', :region_id=>4
 )
 
     ascencio.lots.create({lotNumber: 'A1'})
