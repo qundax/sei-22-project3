@@ -1,3 +1,3 @@
 class Region < ActiveRecord::Base
-  has_many :carpark
+  has_many :carparks
 end
