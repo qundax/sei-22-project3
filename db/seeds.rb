@@ -14,11 +14,11 @@
 
 
 
- rafflesplace = Region.create(
+ rafflesplace = Region.create!(
    :regionname => 'Raffles Place', :postalcode => '01'
 )
 
- cecil = Region.create(
+ cecil = Region.create!(
    :regionname => 'Cecil', :postalcode => '02'
 )
 
