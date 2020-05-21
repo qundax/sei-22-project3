@@ -1,8 +1,8 @@
 class VehiclesController < ApplicationController
-  #before_action :authenticate_user!, :except => [ :index ]
+  before_action :authenticate_user!, :except => [ :index ]
 
   def index
-    @vehicles = Vehicle.all
+    @vehicles = Vehicle.all.where(:user_id => current_user)
   end
 
   def new
@@ -10,12 +10,12 @@ class VehiclesController < ApplicationController
 
   def create
     @vehicle = Vehicle.new(vehicle_params)
-    #@vehicle.user = current_user
+    @vehicle.user = current_user
 
     if @vehicle.save
       redirect_to @vehicle
     else
-      render 'new'
+      render 'edit'
     end
   end
 

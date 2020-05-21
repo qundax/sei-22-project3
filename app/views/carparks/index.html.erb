@@ -1,11 +1,39 @@
-<h1>Hello to shinra carpark</h1>
+<div class ="row mt-4">
+	<div class="col-12 text-center border">
+<h1>Welcome to shinra carpark</h1>
+	</div>
+</div>
 
-
+<div class="row">
+	<div class="col-12 text-right border">
+		<h3><%= Date.today %></h3>
+	</div>
+</div>
+<div class ="row">
+	<div class="col-4 text-center border">
 <div><%= link_to 'New carpark', new_carpark_path %></div>
+</div>
+	<div class="col-4 text-right my-auto	">
+		<p>Find region: </p>
+</div>
+	<div class="col-4 text-center classname border">
+		<% @regions.each do |region| %>
+
+		<div><%= link_to region.regionname, region_path(region) %></div>
+		<% end %>
+</div>
+</div>
+
+
+
+
+
+<div class="row">
 <br/>
   <% @carparks.each do |carpark| %>
-
-      <div><%= carpark.location %></div>
+  		<div class="col-3 border">
+      <div>Carpark name: <%= carpark.location %></div>
+      <div>Region: <%= carpark.region.regionname %></div>
       <div><%= link_to 'Show', carpark_path(carpark) %></div>
 
 
@@ -19,17 +47,19 @@
 
       <% elsif carpark.reservedlots == 0 %>
       	<div><%= link_to 'Apply for season parking', edit_carpark_path(carpark) %></div>
-      	    		 <div class="col-3">
+
       <% else %>
 
       	<div><%= link_to 'Apply for season parking', edit_carpark_path(carpark) %></div>
-      	    		 <div class="col-3">
+
       		<p><%= link_to 'Remove application for season parking', carpark_path(carpark),
         	method: :delete,
         	data: { confirm: 'Are you sure?' } %></p>
-      	</div>
+
       	<% end %>
       	<br/>
       	<br/>
-
+      	</div>
   <% end %>
+
+  </div>
