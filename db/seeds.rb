@@ -344,7 +344,7 @@
 
 
 ascencio = Carpark.create(
-  :location => 'Ascencio', :totallots => 10, :photo_url=> 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg', :region_id=>71
+  :location => 'Ascencio', :totallots => 10, :photo_url=> 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg', :region_id=>3
 )
 
     ascencio.lots.create({lotNumber: 'A1'})
@@ -359,7 +359,7 @@ ascencio = Carpark.create(
     ascencio.lots.create({lotNumber: 'A10'})
 
 regency = Carpark.create(
-  :location => 'Regency', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>80
+  :location => 'Regency', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>5
 )
     regency.lots.create({lotNumber: 'R1'})
     regency.lots.create({lotNumber: 'R2'})
@@ -373,7 +373,7 @@ regency = Carpark.create(
     regency.lots.create({lotNumber: 'R10'})
 
 kovan = Carpark.create(
-  :location => 'Kovan Market', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>113
+  :location => 'Kovan Market', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>8
 )
 
     kovan.lots.create({lotNumber: 'K1'})
@@ -388,7 +388,7 @@ kovan = Carpark.create(
     kovan.lots.create({lotNumber: 'K10'})
 
 jurongpoint = Carpark.create(
-  :location => 'Jurong Point', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>120
+  :location => 'Jurong Point', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>10
 )
 
     jurongpoint.lots.create({lotNumber: 'JP1'})
