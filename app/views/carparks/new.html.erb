@@ -12,6 +12,7 @@
       </ul>
     </div>
   <% end %>
+	<%= form.collection_select :region_id, @regions, :id, :regionname %>
   <p>
     <%= form.label :location %><br>
     <%= form.text_field :location %>
