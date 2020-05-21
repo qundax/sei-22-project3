@@ -25,7 +25,7 @@
 
       <div><%= lot.lotNumber %></div>
       <% if lot.taken %>
-      	<div> Taken</div>
+      	<div> Taken by <%= lot.vehicle.license_plate %></div>
       <% else %>
       	<div>Not Taken</div>
       	<% end %>
