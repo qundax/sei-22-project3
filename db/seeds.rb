@@ -343,40 +343,61 @@
 # )
 
 
-# ascencio = Carpark.create(
-#   :location => 'Ascencio', :totallots => 10, :photo_url=> 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg', :region_id=>71
-# )
+ascencio = Carpark.create(
+  :location => 'Ascencio', :totallots => 10, :photo_url=> 'http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg', :region_id=>71
+)
 
+    ascencio.lots.create({lotNumber: 'A1'})
+    ascencio.lots.create({lotNumber: 'A2'})
+    ascencio.lots.create({lotNumber: 'A3'})
+    ascencio.lots.create({lotNumber: 'A4'})
+    ascencio.lots.create({lotNumber: 'A5'})
+    ascencio.lots.create({lotNumber: 'A6'})
+    ascencio.lots.create({lotNumber: 'A7'})
+    ascencio.lots.create({lotNumber: 'A8'})
+    ascencio.lots.create({lotNumber: 'A9'})
+    ascencio.lots.create({lotNumber: 'A10'})
 
-# regency = Carpark.create(
-#   :location => 'Regency', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>80
-# )
+regency = Carpark.create(
+  :location => 'Regency', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>80
+)
+    regency.lots.create({lotNumber: 'R1'})
+    regency.lots.create({lotNumber: 'R2'})
+    regency.lots.create({lotNumber: 'R3'})
+    regency.lots.create({lotNumber: 'R4'})
+    regency.lots.create({lotNumber: 'R5'})
+    regency.lots.create({lotNumber: 'R6'})
+    regency.lots.create({lotNumber: 'R7'})
+    regency.lots.create({lotNumber: 'R8'})
+    regency.lots.create({lotNumber: 'R9'})
+    regency.lots.create({lotNumber: 'R10'})
 
+kovan = Carpark.create(
+  :location => 'Kovan Market', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>113
+)
 
-# kovan = Carpark.create(
-#   :location => 'Kovan Market', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>113
-# )
+    kovan.lots.create({lotNumber: 'K1'})
+    kovan.lots.create({lotNumber: 'K2'})
+    kovan.lots.create({lotNumber: 'K3'})
+    kovan.lots.create({lotNumber: 'K4'})
+    kovan.lots.create({lotNumber: 'K5'})
+    kovan.lots.create({lotNumber: 'K6'})
+    kovan.lots.create({lotNumber: 'K7'})
+    kovan.lots.create({lotNumber: 'K8'})
+    kovan.lots.create({lotNumber: 'K9'})
+    kovan.lots.create({lotNumber: 'K10'})
 
+jurongpoint = Carpark.create(
+  :location => 'Jurong Point', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>120
+)
 
-# jurongpoint = Carpark.create(
-#   :location => 'Jurong Point', :totallots => 10, :photo_url=> 'http://www.gannett-cdn.com/-mm-/b0ad212381eab60e31d1f067f1c478cea741469a/c=0-10-3443-1963&r=x1683&c=3200x1680/local/-/media/USATODAY/GenericImages/2014/03/31//1396298223000-KISS-KISS-BAND-JY-0718-62187918.jpg', :region_id=>120
-# )
-
-
-
-
-carparks = Carpark.all
-
-carparks.each do |carpark|
-    puts "test"
-    carpark.lots.create({lotNumber: 'R1'})
-    carpark.lots.create({lotNumber: 'R2'})
-    carpark.lots.create({lotNumber: 'R3'})
-    carpark.lots.create({lotNumber: 'R4'})
-    carpark.lots.create({lotNumber: 'R5'})
-    carpark.lots.create({lotNumber: 'R6'})
-    carpark.lots.create({lotNumber: 'R7'})
-    carpark.lots.create({lotNumber: 'R8'})
-    carpark.lots.create({lotNumber: 'R9'})
-    carpark.lots.create({lotNumber: 'R10'})
-end
+    jurongpoint.lots.create({lotNumber: 'JP1'})
+    jurongpoint.lots.create({lotNumber: 'JP2'})
+    jurongpoint.lots.create({lotNumber: 'JP3'})
+    jurongpoint.lots.create({lotNumber: 'JP4'})
+    jurongpoint.lots.create({lotNumber: 'JP5'})
+    jurongpoint.lots.create({lotNumber: 'JP6'})
+    jurongpoint.lots.create({lotNumber: 'JP7'})
+    jurongpoint.lots.create({lotNumber: 'JP8'})
+    jurongpoint.lots.create({lotNumber: 'JP9'})
+    jurongpoint.lots.create({lotNumber: 'JP10'})

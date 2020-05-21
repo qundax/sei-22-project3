@@ -22,6 +22,9 @@
       <div><%= lot.lotNumber %></div>
       <% if lot.taken %>
       	<div>Status: Taken</div>
+      	<div>Owner: <%= lot.vehicle.license_plate %></div>
+      	<div>Since: <%= lot.updated_at %></div>
+      	<div>Expiry: <%= lot.updated_at + 28.days %></div>
       <% else %>
       	<div>Status: Not Taken</div>
       	<% end %>
