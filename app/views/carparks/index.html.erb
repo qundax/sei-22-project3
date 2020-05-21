@@ -40,9 +40,7 @@
       <% if carpark.totallots - carpark.reservedlots == 0 %>
       	<div>	No more season parking lots. Try again another time </div>
       	 <div class="col-3">
-      		<p><%= link_to 'Remove application for season parking', carpark_path(carpark),
-        	method: :delete,
-        	data: { confirm: 'Are you sure?' } %></p>
+      	<div><%= link_to 'Remove season parking', edit_carpark_path(carpark) %></div>
       	</div>
 
       <% elsif carpark.reservedlots == 0 %>
@@ -52,9 +50,7 @@
 
       	<div><%= link_to 'Apply for season parking', edit_carpark_path(carpark) %></div>
 
-      		<p><%= link_to 'Remove application for season parking', carpark_path(carpark),
-        	method: :delete,
-        	data: { confirm: 'Are you sure?' } %></p>
+
 
       	<% end %>
       	<br/>

@@ -8,10 +8,10 @@
 <% @regions.each do |region| %>
 	<div class = "col-3 border pt-3 pb-3">
 		<p> <%= region.regionname %> </p>
-		<%= puts region.carpark.inspect %>
-		<%= puts region.carpark.exists? %>
-		<% if region.carpark.exists? %>
-		<% region.carpark.each do |carpark| %>
+		<%= puts region.carparks.inspect %>
+		<%= puts region.carparks.exists? %>
+		<% if region.carparks.exists? %>
+		<% region.carparks.each do |carpark| %>
 		<p>Carpark: <%= carpark.location %></p>
 		<div><%= link_to 'Show', carpark_path(carpark) %></div>
 		<% end%>
