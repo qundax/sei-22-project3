@@ -1,5 +1,5 @@
 <%= form_with scope: :carpark, url: carparks_path, local: true do |form| %>
-
+	<%= form.collection_select :region_id, @regions, :id, :regionname %>
   <p>
     <%= form.label :location %><br>
     <%= form.text_field :location %>

@@ -22,4 +22,12 @@ Rails.application.routes.draw do
   delete '/lots/:id' => 'lots#destroy'
 
 
+  get '/regions' => 'regions#index', as: 'regions'
+  #get '/regions/new' => 'regions#new', as: 'new_region'
+  #post '/regions' => 'regions#create'
+  get '/regions/:id' => 'regions#show' , as: 'region'
+  #get '/regions/:id/edit' => 'regions#edit', as: 'edit_region'
+  #patch '/regions/:id' => 'regions#update'
+  #delete '/regions/:id' => 'regions#destroy'
+
 end
