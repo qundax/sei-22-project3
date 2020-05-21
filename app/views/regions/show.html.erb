@@ -1,0 +1,12 @@
+<h1>Region</h1>
+
+
+<p>Region:  <%= @region.regionname %> </p>
+			<% if @region.carpark.exists? %>
+		<% @region.carpark.each do |carpark| %>
+		<p>Carpark: <%= carpark.location %></p>
+		<div><%= link_to 'Show', carpark_path(carpark) %></div>
+		<% end%>
+		<% else %>
+		<p> No carpark in this region</p>
+		<% end %>

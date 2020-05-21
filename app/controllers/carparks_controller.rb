@@ -2,6 +2,8 @@ class CarparksController < ApplicationController
 
   def index
     @carparks = Carpark.all
+    @regions = Region.all
+    @regions = @regions.order("regionname")
     @lots = Lot.where.not(vehicle_id: nil)
     puts @lots.inspect
     @lots.each do |lot|
@@ -19,6 +21,7 @@ class CarparksController < ApplicationController
 
 
   def new
+    @regions = Region.all
   end
 
   def create
@@ -98,7 +101,7 @@ end
 private
 
   def carpark_params
-    params.require(:carpark).permit(:location, :totallots, :photo_url)
+    params.require(:carpark).permit(:location, :totallots, :photo_url, :region_id)
   end
 
 end
