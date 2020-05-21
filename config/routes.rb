@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-
-
   get '/carparks' => 'carparks#index', as: 'carparks'
   get '/carparks/new' => 'carparks#new', as: 'new_carpark'
   post '/carparks' => 'carparks#create'
@@ -16,7 +14,7 @@ Rails.application.routes.draw do
   get '/carparks/:id/lots' => 'lots#index', as: 'lots'
   get '/carparks/:id/lots/new' => 'lots#new', as: 'new_lot'
   post '/carparks/:id/lots' => 'lots#create'
-  get 'lots/:id' => 'lots#show' , as: 'lot'
+  get '/lots/:id' => 'lots#show' , as: 'lot'
   get '/lots/:id/edit' => 'lots#edit', as: 'edit_lot'
   patch '/lots/:id' => 'lots#update'
   delete '/lots/:id' => 'lots#destroy'
