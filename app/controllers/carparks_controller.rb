@@ -21,14 +21,18 @@ class CarparksController < ApplicationController
 
 
   def new
+    @carpark = Carpark.new
     @regions = Region.all
   end
 
   def create
     @carpark = Carpark.new(carpark_params)
 
-    @carpark.save
-    redirect_to @carpark
+    if @carpark.save
+      redirect_to @carpark
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -54,10 +58,11 @@ def update
     puts params[:carpark].values[1]
   puts @carpark.location
   puts @lot.lotNumber
-  @carpark.update(reservedlots: @carpark.reservedlots+1)
-  @lot.update(vehicle_id: params[:carpark].values[1].to_i)
-  @lot.update(taken: true)
-  redirect_to carparks_path
+  if @carpark.update(reservedlots: @carpark.reservedlots+1) && @lot.update(vehicle_id: params[:carpark].values[1].to_i) && @lot.update(taken: true)
+    redirect_to carparks_path
+  else
+    render 'edit'
+  end
 
 end
 

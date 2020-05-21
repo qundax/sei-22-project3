@@ -1,6 +1,19 @@
 <h2>New Vehicle</h2>
 <%= form_with scope: :vehicle, url: vehicles_path, local: true do |form| %>
-	<p>
+	<br>
+	<% if @vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h5 class="text-danger">
+        <%= pluralize(@vehicle.errors.count, "error") %> occurred:
+      </h5>
+      <ul>
+        <% @vehicle.errors.full_messages.each do |msg| %>
+          <li class="text-danger"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
 		<%= form.label :license_plate %><br>
 		<%= form.text_field :license_plate %>
 	</p>

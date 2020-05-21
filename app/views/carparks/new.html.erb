@@ -1,4 +1,17 @@
 <%= form_with scope: :carpark, url: carparks_path, local: true do |form| %>
+	<br>
+	<% if @carpark.errors.any? %>
+    <div id="error_explanation">
+      <h5 class="text-danger">
+        <%= pluralize(@carpark.errors.count, "error") %> occurred:
+      </h5>
+      <ul>
+        <% @carpark.errors.full_messages.each do |msg| %>
+          <li class="text-danger"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 	<%= form.collection_select :region_id, @regions, :id, :regionname %>
   <p>
     <%= form.label :location %><br>
@@ -18,5 +31,6 @@
 
   <p>
     <%= form.submit %>
+    <%= link_to 'Back', carparks_path %>
   </p>
 <% end %>

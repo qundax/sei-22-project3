@@ -7,6 +7,7 @@ class LotsController < ApplicationController
 
 
   def new
+    @lot = Lot.new
     @carparks = Carpark.all
   end
 
@@ -15,9 +16,11 @@ class LotsController < ApplicationController
     puts " i have entered here"
     @carpark = Carpark.find(params[:id])
     @lot.carpark = @carpark
-    @lot.save
-    @carpark.update(totallots: @carpark.lot.count)
-    redirect_to @lot
+    if @lot.save && @carpark.update(totallots: @carpark.lot.count)
+      redirect_to @lot
+    else
+      render 'new'
+    end
   end
 
   def show
