@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   #patch '/regions/:id' => 'regions#update'
   #delete '/regions/:id' => 'regions#destroy'
 
+  root to: 'carparks#index'
 end
