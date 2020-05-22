@@ -5,6 +5,9 @@ class HomesController < ApplicationController
   def about
   end
 
-  def role
+  def loginrole
+  end
+
+  def signuprole
   end
 end
