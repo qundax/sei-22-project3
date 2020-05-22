@@ -31,5 +31,6 @@ Rails.application.routes.draw do
   #patch '/regions/:id' => 'regions#update'
   #delete '/regions/:id' => 'regions#destroy'
 
-  get '/role' => 'homes#role'
+  get '/login/role' => 'homes#loginrole'
+  get '/signup/role' => 'homes#signuprole'
 end
