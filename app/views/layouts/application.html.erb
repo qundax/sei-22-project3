@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ParkingGoWhere</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+<head>
+	<title>ParkingGoWhere</title>
+	<%= csrf_meta_tags %>
+	<%= csp_meta_tag %>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<%= javascript_include_tag 'application' %>
+</head>
 
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <%= link_to 'App Name', root_path, :class => "navbar-brand" %>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
+<body>
+	<% if user_signed_in? %>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<%= link_to 'App Name', root_path, :class => "navbar-brand" %>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav mr-auto">
-		    	<li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Vehicles
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		        	<%= link_to 'My Vehicles', vehicles_path(user: current_user), :class => "dropdown-item" %>
-		        	<%= link_to 'Add New Vehicle', new_vehicle_path, :class => "dropdown-item" %>
-		        </div>
-		      </li>
-		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Carparks
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		        	<%= link_to 'All Carparks', carparks_path, :class => "dropdown-item" %>
-		        	<%= link_to 'Add New Carpark', new_carpark_path, :class => "dropdown-item" %>
-		        </div>
-		      </li>
-		      <li class="nav-item">
-		        <%= link_to 'Regions', regions_path, :class => "nav-link" %>
-		      </li>
-		    </ul>
-		    <div class="form-inline my-2 my-lg-0">
-		    	<ul class="navbar-nav mr-auto">
-			    	<% if user_signed_in? %>
-			    		<li class="nav-item active form-inline">
-			    			Welcome &nbsp;<strong><%= current_user.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    		</li>
-			    		<li class="nav-item active">
-			      		<%= link_to 'Log out', destroy_user_session_url, method: :delete, :class => "nav-link" %>
-			      	</li>
-			    	<% else %>
-			    		<li class="nav-item active">
-	      				<%= link_to 'Log in', new_user_session_url, :class => "nav-link" %>
-	      			</li>
-	      		<% end %>
-				  </ul>
-			  <div>
-		  </div>
-		</nav>
-		<br>
-  	<div class="container">
-    <%= yield %>
-    </div>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Vehicles
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<%= link_to 'My Vehicles', vehicles_path(user: current_user), :class => "dropdown-item" %>
+						<%= link_to 'Add New Vehicle', new_vehicle_path, :class => "dropdown-item" %>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Carparks
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<%= link_to 'All Carparks', carparks_path, :class => "dropdown-item" %>
+						<%= link_to 'Add New Carpark', new_carpark_path, :class => "dropdown-item" %>
+					</div>
+				</li>
+				<li class="nav-item">
+					<%= link_to 'Regions', regions_path, :class => "nav-link" %>
+				</li>
+			</ul>
+			<div class="form-inline my-2 my-lg-0">
+				<ul class="navbar-nav mr-auto">
+					<% if user_signed_in? %>
+					<li class="nav-item active form-inline">
+						Welcome &nbsp;<strong><%= current_user.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</li>
+					<li class="nav-item active">
+						<%= link_to 'Log out', destroy_user_session_url, method: :delete, :class => "nav-link" %>
+					</li>
+					<% else %>
+					<li class="nav-item active">
+						<%= link_to 'Log in', new_user_session_url, :class => "nav-link" %>
+					</li>
+					<% end %>
+				</ul>
+				<div>
+				</div>
+			</nav>
+			<% end %>
+			<%= yield %>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
-</html>
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		</body>
+		</html>
