@@ -11,17 +11,20 @@
 
 <div class ="row ">
 	<div class="col-12 text-center border pt-4 pb-4">
-<h2>Lots allocated:  <%= @carpark.lot.count %></h2>
+<h2>Lots allocated:  <%= @carpark.lots.count %></h2>
 	</div>
 </div>
 
 
 <div class ="row ">
- <% @carpark.lot.each do |lot| %>
+ <% @carpark.lots.each do |lot| %>
  <div class = "col-3 text-center border pt-4 pb-4">
       <div><%= lot.lotNumber %></div>
       <% if lot.taken %>
       	<div>Status: Taken</div>
+      	<div>Owner: <%= lot.vehicle.license_plate %></div>
+      	<div>Since: <%= lot.updated_at %></div>
+      	<div>Expiry: <%= lot.updated_at + 28.days %></div>
       <% else %>
       	<div>Status: Not Taken</div>
       	<% end %>

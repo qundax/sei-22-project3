@@ -2,7 +2,7 @@ class LotsController < ApplicationController
 
   def index
     @carpark = Carpark.find(params[:id])
-    puts @carpark.lot.count
+    puts @carpark.lots.count
   end
 
 
@@ -16,7 +16,7 @@ class LotsController < ApplicationController
     puts " i have entered here"
     @carpark = Carpark.find(params[:id])
     @lot.carpark = @carpark
-    if @lot.save && @carpark.update(totallots: @carpark.lot.count)
+    if @lot.save && @carpark.update(totallots: @carpark.lots.count)
       redirect_to @lot
     else
       render 'new'

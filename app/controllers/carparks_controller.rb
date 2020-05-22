@@ -44,8 +44,8 @@ class CarparksController < ApplicationController
 def edit
   @carpark = Carpark.find(params[:id])
   @vehicles = Vehicle.all.where(:user_id => current_user)
-  @lots = @carpark.lot.where(taken: false)
-  @usedlots = @carpark.lot.where(taken: true)
+  @lots = @carpark.lots.where(taken: false)
+  @usedlots = @carpark.lots.where(taken: true)
   puts "in the edit path"
 end
 
@@ -61,6 +61,10 @@ def update
   if @carpark.update(reservedlots: @carpark.reservedlots+1) && @lot.update(vehicle_id: params[:carpark].values[1].to_i) && @lot.update(taken: true)
     redirect_to carparks_path
   else
+      @carpark = Carpark.find(params[:id])
+  @vehicles = Vehicle.all.where(:user_id => current_user)
+  @lots = @carpark.lots.where(taken: false)
+  @usedlots = @carpark.lots.where(taken: true)
     render 'edit'
   end
 

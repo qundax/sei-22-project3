@@ -3,7 +3,7 @@
 
 <p>Region:  <%= @region.regionname %> </p>
 			<% if @region.carparks.exists? %>
-		<% @region.carpark.each do |carpark| %>
+		<% @region.carparks.each do |carpark| %>
 		<p>Carpark: <%= carpark.location %></p>
 		<div><%= link_to 'Show', carpark_path(carpark) %></div>
 		<% end%>
