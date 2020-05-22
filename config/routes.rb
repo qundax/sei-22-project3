@@ -36,7 +36,7 @@ Rails.application.routes.draw do
 
 
 
-  get '/offences/' => 'offences#index', as: 'offences'
+  get 'carparks/:id/offences/' => 'offences#index', as: 'offences'
   get 'carparks/:id/offences/new' => 'offences#new', as: 'new_offence'
   post 'carparks/:id/offences/' => 'offences#create'
   get '/offences/:id' => 'offences#show' , as: 'offence'

@@ -1,7 +1,7 @@
 class OffencesController < ApplicationController
 
   def index
-    @offences = Offence.all
+    @offences = Offence.all.order(:offendingPlateNumber)
   end
 
   def new
