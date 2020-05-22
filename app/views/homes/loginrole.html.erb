@@ -1,0 +1,35 @@
+<div id="navbar" class="d-flex justify-content-center role-nav">
+	<div id="logo">
+		<a href="/">PLACEHOLDER</a>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<h2 class="my-5">Are you a...?</h2>
+	<div class="card-wrapper d-flex w-100 justify-content-around">
+		<div class="col role-card">
+			<%= image_tag "user.jpg", class: "image" %>
+			<a href="/users/sign_in">
+				<div class="overlay">
+					<div class="text">Vehicle Owner</div>
+				</div>
+			</a>
+		</div>
+		<div class="col role-card">
+			<%= image_tag "carpark.jpg", class: "image" %>
+			<a href="/admins/sign_in">
+				<div class="overlay">
+					<div class="text">Facilities Manager</div>
+				</div>
+			</a>
+		</div>
+		<div class="col role-card">
+			<%= image_tag "warden.jpg", class: "image" %>
+			<a href="/summons/sign_in">
+				<div class="overlay">
+					<div class="text">Parking Warden</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
