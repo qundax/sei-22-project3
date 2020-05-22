@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   resources :vehicles
-  devise_for :users
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations" }
+  devise_for :admins, controllers: { sessions: "admins/sessions", registrations: "admins/registrations" }
+  devise_for :summons, controllers: { sessions: "summons/sessions", registrations: "summons/registrations" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'homes#index'
 
   get '/carparks' => 'carparks#index', as: 'carparks'
   get '/carparks/new' => 'carparks#new', as: 'new_carpark'
@@ -28,4 +31,5 @@ Rails.application.routes.draw do
   #patch '/regions/:id' => 'regions#update'
   #delete '/regions/:id' => 'regions#destroy'
 
+  get '/role' => 'homes#role'
 end
