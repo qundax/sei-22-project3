@@ -31,12 +31,19 @@ Rails.application.routes.draw do
   #patch '/regions/:id' => 'regions#update'
   #delete '/regions/:id' => 'regions#destroy'
 
+
   get '/role' => 'homes#role'
 
 
 
 
-  get 'carparks/:id/offences/' => 'offences#index', as: 'offences'
+
+
+  get '/login/role' => 'homes#loginrole'
+  get '/signup/role' => 'homes#signuprole'
+
+  
+    get 'carparks/:id/offences/' => 'offences#index', as: 'offences'
   get 'carparks/:id/offences/new' => 'offences#new', as: 'new_offence'
   post 'carparks/:id/offences/' => 'offences#create'
   get '/offences/:id' => 'offences#show' , as: 'offence'
