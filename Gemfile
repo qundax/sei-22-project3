@@ -61,4 +61,4 @@ gem 'devise'
 
 gem 'ffaker'
 
-gem 'bootstrap', '~> 4.1.0'
+gem 'bootstrap', '~> 4.3.1'
