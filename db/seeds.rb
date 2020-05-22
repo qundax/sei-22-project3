@@ -275,8 +275,6 @@
    :regionname => 'Jurong 4', :postalcode => '63'
 )
 
-
-
   tuas = Region.create(
    :regionname => 'Tuas', :postalcode => '64'
 )
