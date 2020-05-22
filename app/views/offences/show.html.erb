@@ -1,0 +1,16 @@
+<h1>Show offence</h1>
+<p> Vehicle number: <%= @offence.offendingPlateNumber %> </p>
+<p> Carpark: <%= @offence.lot.carpark.location %></p>
+<p> Illegal parking at lot <%= @offence.lot.lotNumber %></p>
+<% if @vehicleoffencecount == 1 %>
+<p>Number of offences: <%= @vehicleoffencecount %></p>
+<p>Issue warning</p>
+<% else %>
+<% if @vehicleoffencecount == 2 %>
+<p>Number of offences: <%= @vehicleoffencecount %></p>
+<p>Issue Fine</p>
+<% else %>
+<p>Number of offences: <%= @vehicleoffencecount %></p>
+<p> Summon Infrit to clamp your car</p>
+<% end %>
+<% end %>

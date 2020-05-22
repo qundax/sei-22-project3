@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_22_004832) do
+ActiveRecord::Schema.define(version: 2020_05_22_030243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 2020_05_22_004832) do
     t.index ["vehicle_id"], name: "index_lots_on_vehicle_id"
   end
 
+  create_table "offences", force: :cascade do |t|
+    t.string "offendingPlateNumber"
+    t.bigint "lot_id"
+    t.bigint "carpark_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["carpark_id"], name: "index_offences_on_carpark_id"
+    t.index ["lot_id"], name: "index_offences_on_lot_id"
+  end
+
   create_table "regions", force: :cascade do |t|
     t.string "regionname"
     t.string "postalcode"
@@ -76,6 +86,8 @@ ActiveRecord::Schema.define(version: 2020_05_22_004832) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
+    t.boolean "summon", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
