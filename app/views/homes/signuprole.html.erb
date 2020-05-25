@@ -1,11 +1,13 @@
 <div id="navbar" class="d-flex justify-content-center role-nav">
-	<div id="logo">
-		<a href="/">PLACEHOLDER</a>
-	</div>
+	<a href="/">
+		<div id="logo">
+			<%= image_tag 'logo.png', style: 'height: 100%;' %>
+		</div>
+	</a>
 </div>
 
-<div class="container-fluid">
-	<h2 class="my-5">Are you a...?</h2>
+<div class="container-fluid main-content">
+	<h2>Are you a...?</h2>
 	<div class="card-wrapper d-flex w-100 justify-content-around">
 		<div class="col role-card">
 			<%= image_tag "user.jpg", class: "image" %>
