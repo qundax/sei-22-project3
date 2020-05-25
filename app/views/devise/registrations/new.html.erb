@@ -1,29 +1,42 @@
-<h2>Sign up</h2>
+<div id="navbar" class="d-flex justify-content-center role-nav">
+	<a href="/">
+		<div id="logo">
+			<%= image_tag 'logo.png', style: 'height: 100%;' %>
+		</div>
+	</a>
+</div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="container-fluid main-content">
+	<h2>Sign up</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+	<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "w-25 mx-auto"}) do |f| %>
+	<%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+	<div class="form-group">
+		<div class="field">
+			<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+		</div>
+	</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+	<div class="form-group my-4">
+		<div class="field">
+			<% if @minimum_password_length %>
+			<% @password_string = "Password (" + @minimum_password_length.to_s + " characters minimum)" %>
+			<% end %>
+			<%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: @password_string %>
+		</div>
+	</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+	<div class="form-group">
+		<div class="field">
+			<%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password Confirmation" %>
+		</div>
+	</div>
 
-<%= render "devise/shared/links" %>
+	<div class="actions my-4">
+		<button type="submit" class="btn btn-primary">Sign Up</button>
+	</div>
+	<% end %>
+
+	<p>Already have an account? <%= render "devise/shared/links" %></p>
+</div>
