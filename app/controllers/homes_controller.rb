@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   def index
+    @carparks = Carpark.all
   end
 
   def about
