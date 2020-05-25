@@ -2,12 +2,43 @@
 	height: 80px;
 }
 
-.role-nav {
-	background-color: #C0D1E3;
+#logo {
+	padding: 0 10px;
+	margin: 10px 20px;
+	height: 60px;
+	border: solid 2px #3F709A;
+	border-radius: 10px;
+	text-align: center;
 }
 
-#title-bg {
-	background-color: rgba(#FFFFFF, 0.8);
-	height: 300px;
-	width: 500px;
+.nav-link {
+	color: #5782A7;
+	text-decoration: none;
+}
+
+.role-nav {
+	background-color: #E7EDF2;
+}
+
+#title {
+	color: #FFFFFF;
+	font-weight: bold;
+
+	h1 {
+		font-size: 80px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+}
+
+#footer {
+	background-color: #000000;
+	color: #FFFFFF;
 }
