@@ -1,0 +1,35 @@
+<h1>Show offence</h1>
+<p> Vehicle number: <%= @offence.offendingPlateNumber %> </p>
+<p> Carpark: <%= @offence.lot.carpark.location %></p>
+<p> Illegal parking at lot <%= @offence.lot.lotNumber %></p>
+<% if @vehicleoffencecount == 1 %>
+<p>Number of offences: <%= @vehicleoffencecount %></p>
+<p>Issue warning</p>
+ <div class="alert alert-info">
+    <span class="glyphicon glyphicon-info-sign"> </span>
+    <strong> Alerted </strong> Send out warning letter.
+    <button type="button" class="close" data-dismiss="alert"> &times; </button>
+</div>
+<script>alert('Alerted user about warning!')</script>
+<% else %>
+<% if @vehicleoffencecount == 2 %>
+<p>Number of offences: <%= @vehicleoffencecount %></p>
+<p>Issue Fine</p>
+<div class="alert alert-info">
+    <span class="glyphicon glyphicon-info-sign"> </span>
+    <strong> Alerted </strong> Send out fine letter.
+    <button type="button" class="close" data-dismiss="alert"> &times; </button>
+</div>
+<script>alert('Alerted user about fine!')</script>
+<% else %>
+<p>Number of offences: <%= @vehicleoffencecount %></p>
+<p> Summon Infrit to clamp your car</p>
+<div class="alert alert-info">
+    <span class="glyphicon glyphicon-info-sign"> </span>
+    <strong> Alerted </strong> Clamp user car.
+    <button type="button" class="close" data-dismiss="alert"> &times; </button>
+</div>
+<script>alert('Alerted user about car clamp!')</script>
+<% end %>
+<% end %>
+<%= link_to 'Back', offences_path %>
