@@ -1,0 +1,20 @@
+		<div class="row">
+		<div class= "col-1 border"><p>S/no</div>
+		<div class = "col-2 border"><p>Carplate</p></div>
+		<div class = "col-2 border"><p>Location</p></div>
+		<div class = "col-2 border"><p>Lot Number</p></div>
+		<div class = "col-2 border"><p>Date of Offense</p></div>
+		<div class = "col-2 border"><p>View</p></div>
+		</div>
+
+
+		<% @offences.each_with_index do |offence, index| %>
+		<div class="row">
+		<div class= "col-1 border"><p><%= index %></p></div>
+		<div class = "col-2 border"><%= offence.offendingPlateNumber %></div>
+		<div class = "col-2 border"><%= offence.lot.carpark.location %></div>
+		<div class = "col-2 border"><%= offence.lot.lotNumber %></div>
+		<div class = "col-2 border"><%= offence.created_at %></div>
+		<div class="col-2 border"><%= link_to 'View', offence_path(offence) %></div>
+		</div>
+		<% end %>

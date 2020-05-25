@@ -19,6 +19,7 @@
 <div class ="row ">
  <% @carpark.lots.each do |lot| %>
  <div class = "col-3 text-center border pt-4 pb-4">
+
       <div><%= lot.lotNumber %></div>
       <% if lot.taken %>
       	<div>Status: Taken</div>
@@ -32,6 +33,7 @@
       	<p><%= link_to 'Remove lot', lot_path(lot),
         	method: :delete,
         	data: { confirm: 'Are you sure?' } %></p>
+        	<%= link_to 'Report', new_offence_path, class: "btn btn-primary"%>
         </div>
 
 <% end %>
