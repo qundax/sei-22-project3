@@ -1,0 +1,13 @@
+<h1>Offensive attack</h1>
+<%= form_with scope: :offence, url: offences_path, local: true do |form| %>
+<h1>Location of offence: <%= @carpark.location %></h1>
+		<%= form.collection_select :lot_id, @carpark.lots, :id, :lotNumber %>
+		<p>
+    <%= form.label :offendingPlateNumber %><br>
+    <%= form.text_area :offendingPlateNumber %>
+  	</p>
+
+    <p>
+    <%= form.submit %>
+  	</p>
+		<% end %>
