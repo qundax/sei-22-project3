@@ -1,5 +1,5 @@
 class OffencesController < ApplicationController
-
+ before_action :authenticate_summon!, :except => [:show, :index, :edit, :update, :destroy]
   def index
     @offences = Offence.all.order(:offendingPlateNumber)
   end
