@@ -1,54 +1,152 @@
-<h1>Aka tadan</h1>
+<div id="navbar" class="d-flex justify-content-center role-nav">
+	<a href="/">
+		<div id="logo">
+			<%= image_tag 'logo.png', style: 'height: 100%;' %>
+		</div>
+	</a>
+</div>
 
+<% if current_user || current_admin || current_summon %>
+<nav class="navbar navbar-expand bg-light">
+	<% if current_user %>
+	<ul class="navbar-nav">
+		<li class="nav-item form-inline">
+			Welcome, &nbsp;<strong><%= current_user.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</li>
+	</ul>
 
-<h1>Confirmation</h1>
-<br>
-<% if @carpark.errors.any? %>
-  <div id="error_explanation">
-    <h5 class="text-danger">
-      <%= pluralize(@carpark.errors.count, "error") %> occurred:
-    </h5>
-    <ul>
-      <% @carpark.errors.full_messages.each do |msg| %>
-        <li class="text-danger"><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Vehicles
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<%= link_to 'My Vehicles', vehicles_path(user: current_user), :class => "dropdown-item" %>
+				<%= link_to 'Add New Vehicle', new_vehicle_path, :class => "dropdown-item" %>
+			</div>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Carparks', carparks_path, :class => "nav-link" %>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Regions', regions_path, :class => "nav-link" %>
+		</li>
+	</ul>
+
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "nav-link" %>
+		</li>
+	</ul>
+	<% elsif current_admin %>
+	<ul class="navbar-nav">
+		<li class="nav-item active form-inline">
+			Welcome, &nbsp;<strong><%= current_admin.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</li>
+	</ul>
+
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Carparks
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<%= link_to 'All Carparks', carparks_path, :class => "dropdown-item" %>
+				<%= link_to 'Add New Carpark', new_carpark_path, :class => "dropdown-item" %>
+			</div>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Regions', regions_path, :class => "nav-link" %>
+		</li>
+	</ul>
+
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<%= link_to 'LOG OUT', destroy_admin_session_path, method: :delete, class: "nav-link" %>
+		</li>
+	</ul>
+	<% elsif current_summon %>
+	<ul class="navbar-nav">
+		<li class="nav-item active form-inline">
+			Welcome, &nbsp;<strong><%= current_summon.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</li>
+	</ul>
+
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+			<%= link_to 'Carparks', carparks_path, :class => "nav-link" %>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Regions', regions_path, :class => "nav-link" %>
+		</li>
+	</ul>
+
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<%= link_to 'LOG OUT', destroy_summon_session_path, method: :delete, class: "nav-link" %>
+		</li>
+	</ul>
+	<% end %>
+</nav>
 <% end %>
-<%= form_with scope: :carpark, model: @carpark, local: true do |form| %>
 
-  <p> Apply for season parking at <%= @carpark.location %> </p>
-<% if false %>
-  <% @usedlots.each do |usedlot| %>
-  <% puts "hohohohohohohohohohoh" %>
-  <% puts usedlot.vehicle.license_plate %>
-  	<% if usedlot.vehicle.user.id == current_user.id && usedlot.carpark_id == params[:id].to_i %>
-  		<p>*Vehicle <strong><%= usedlot.vehicle.license_plate %></strong> has a valid season parking lot <strong>(<%= usedlot.lotNumber %>)</strong> at this carpark.</p>
-  	<% end %>
-		<%= form.collection_select :lot_id, @lots, :id, :lotNumber %>
-		<%= form.collection_select :vehicle_id, @vehicles, :id, :license_plate %>
-  <% end %>
-<% end %>
+<div class="container-fluid main-content">
+	<h2>Confirmation</h2>
 
+	<% if @carpark.errors.any? %>
+	<div id="error_explanation">
+		<h5 class="text-danger">
+			<%= pluralize(@carpark.errors.count, "error") %> occurred:
+		</h5>
+		<ul>
+			<% @carpark.errors.full_messages.each do |msg| %>
+			<li class="text-danger"><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
 
-  <p> Register?
-  	<%= form.collection_select :lot_ids, @lots, :id, :lotNumber %>
-  	<%= form.collection_select :vehicle_id, @vehicles, :id, :license_plate %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+	<%= form_with scope: :carpark, model: @carpark, local: true do |form| %>
 
-<% end %>
+	<p> Apply for season parking at <%= @carpark.location %> </p>
+	<% if false %>
+	<% @usedlots.each do |usedlot| %>
+	<% puts usedlot.vehicle.license_plate %>
+	<% if usedlot.vehicle.user.id == current_user.id && usedlot.carpark_id == params[:id].to_i %>
+	<p>*Vehicle <strong><%= usedlot.vehicle.license_plate %></strong> has a valid season parking lot <strong>(<%= usedlot.lotNumber %>)</strong> at this carpark.</p>
+	<% end %>
+	<div class="form-group">
+		<%= form.collection_select :lot_id, @lots, :id, :lotNumber, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= form.collection_select :vehicle_id, @vehicles, :id, :license_plate, class: "form-control" %>
+	</div>
+	<% end %>
+	<% end %>
 
-<%= form_for @carpark, method: :delete do |f| %>
+	<p>Register?</p>
+	<div class="form-group">
+		<%= form.collection_select :lot_id, @lots, :id, :lotNumber, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= form.collection_select :vehicle_id, @vehicles, :id, :license_plate, class: "form-control" %>
+	</div>
 
-<%= f.collection_select :lot_ids, @usedlots, :id, :lotNumber %>
-  <p> Delete?
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-  <% end %>
+	<div class="actions my-4">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
 
-<%= link_to 'Back', carparks_path %>
+	<% end %>
+
+	<%= form_for @carpark, method: :delete do |f| %>
+	<p>Delete?</p>
+	<div class="form-group">
+		<%= f.collection_select :lot_ids, @usedlots, :id, :lotNumber, class: "form-control" %>
+	</div>
+	<div class="actions my-4">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+	<% end %>
+
+	<%= link_to 'Back', carparks_path %>
+</div>

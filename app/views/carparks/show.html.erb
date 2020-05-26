@@ -1,82 +1,176 @@
-<div class="row mt-5 mb-5">
-	<div class = "col-12 text-center">
-		  <h1>Location: <%= @carpark.location %></h1>
-
-	</div>
-
+<div id="navbar" class="d-flex justify-content-center role-nav">
+	<a href="/">
+		<div id="logo">
+			<%= image_tag 'logo.png', style: 'height: 100%;' %>
+		</div>
+	</a>
 </div>
 
+<% if current_user || current_admin || current_summon %>
+<nav class="navbar navbar-expand bg-light">
+	<% if current_user %>
+	<ul class="navbar-nav">
+		<li class="nav-item form-inline">
+			Welcome, &nbsp;<strong><%= current_user.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</li>
+	</ul>
 
-<div class="row">
-	<div class = "col-12 text-center">
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Vehicles
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<%= link_to 'My Vehicles', vehicles_path(user: current_user), :class => "dropdown-item" %>
+				<%= link_to 'Add New Vehicle', new_vehicle_path, :class => "dropdown-item" %>
+			</div>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Carparks', carparks_path, :class => "nav-link" %>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Regions', regions_path, :class => "nav-link" %>
+		</li>
+	</ul>
 
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "nav-link" %>
+		</li>
+	</ul>
+	<% elsif current_admin %>
+	<ul class="navbar-nav">
+		<li class="nav-item active form-inline">
+			Welcome, &nbsp;<strong><%= current_admin.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</li>
+	</ul>
 
-  <img src=<%= @carpark.photo_url %>   width="50%" height="100%" alt="Carpark image" />
-	</div>
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Carparks
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<%= link_to 'All Carparks', carparks_path, :class => "dropdown-item" %>
+				<%= link_to 'Add New Carpark', new_carpark_path, :class => "dropdown-item" %>
+			</div>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Regions', regions_path, :class => "nav-link" %>
+		</li>
+	</ul>
 
-</div>
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<%= link_to 'LOG OUT', destroy_admin_session_path, method: :delete, class: "nav-link" %>
+		</li>
+	</ul>
+	<% elsif current_summon %>
+	<ul class="navbar-nav">
+		<li class="nav-item active form-inline">
+			Welcome, &nbsp;<strong><%= current_summon.email.split('@')[0] %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</li>
+	</ul>
 
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+			<%= link_to 'Carparks', carparks_path, :class => "nav-link" %>
+		</li>
+		<li class="nav-item">
+			<%= link_to 'Regions', regions_path, :class => "nav-link" %>
+		</li>
+	</ul>
 
-<div class="row mt-5">
-	<div class = "col-6 text-center ">
-  <strong>Lots taken:</strong>
-  <%= @carpark.reservedlots %>
-	</div>
-		<div class = "col-6 text-center ">
-<strong>Lots remaining:</strong>
-  <%= @carpark.totallots - @carpark.reservedlots %>
-	</div>
-</div>
-
-
-<p>
-
-</p>
-
-<div class=" row">
- <% @carpark.lots.each do |lot| %>
-
-      <div class="col-4 border text-center"><%= lot.lotNumber %><br/>
-      <% if lot.taken %>
-      	 Taken by <%= lot.vehicle.license_plate %></div>
-      <% else %>
-      	Not Taken</div>
-      	<% end %>
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<%= link_to 'LOG OUT', destroy_summon_session_path, method: :delete, class: "nav-link" %>
+		</li>
+	</ul>
+	<% end %>
+</nav>
 <% end %>
-</div>
+
+<div class="container-fluid my-5">
+	<div class="row my-5">
+		<div class = "col-12 text-center">
+			<h2>Location: <%= @carpark.location %></h2>
+
+		</div>
+
+	</div>
 
 
-<div class="row">
-	<div class = "col-12 text-center">
-      <% if @carpark.totallots - @carpark.reservedlots == 0 %>
-      	<div>	No more season parking lots. Try again another time </div>
-      	 <div class="col-3">
-
-      		 	<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
-      	</div>
-
-      <% elsif @carpark.reservedlots == 0 %>
-      		<div class="">
-      	      		 	<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
-
-      <% else %>
+	<div class="row">
+		<div class = "col-12 text-center">
 
 
+			<img src=<%= @carpark.photo_url %> alt="Carpark image" width="50%" height="100%"/>
+		</div>
+
+	</div>
 
 
-      <%= link_to 'Apply/Remove season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
+	<div class="row mt-5">
+		<div class = "col-6 text-center ">
+			<strong>Lots taken:</strong>
+			<%= @carpark.reservedlots %>
+		</div>
+		<div class = "col-6 text-center ">
+			<strong>Lots remaining:</strong>
+			<%= @carpark.totallots - @carpark.reservedlots %>
+		</div>
+	</div>
 
-      	<% end %>
-     </div>
-</div>
-</div>
-<div class= "row">
 
-<div class = "col-6 text-center"><%= link_to 'View lot', lots_path, class: "btn btn-info" %></div>
-<div class = "col-6 text-center"><%= link_to 'New lot', new_lot_path, class: "btn btn-info" %></div>
-</div>
-<div class = "row">
-	<div class = " col-12 text-center">
-<%= link_to 'Back', carparks_path , class: "btn btn-secondary"%>
-</div>
+	<p>
+
+	</p>
+
+	<div class=" row">
+		<% @carpark.lots.each do |lot| %>
+
+		<div class="col-4 border text-center"><%= lot.lotNumber %><br/>
+			<% if lot.taken %>
+			Taken by <%= lot.vehicle.license_plate %></div>
+			<% else %>
+		Not Taken</div>
+		<% end %>
+		<% end %>
+	</div>
+
+
+	<div class="row">
+		<div class = "col-12 text-center">
+			<% if @carpark.totallots - @carpark.reservedlots == 0 %>
+			<div>	No more season parking lots. Try again another time </div>
+			<div class="col-3">
+
+				<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
+			</div>
+
+			<% elsif @carpark.reservedlots == 0 %>
+			<div class="">
+				<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
+
+				<% else %>
+
+
+
+
+				<%= link_to 'Apply/Remove season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
+
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class= "row">
+
+		<div class = "col-6 text-center"><%= link_to 'View lot', lots_path, class: "btn btn-info" %></div>
+		<div class = "col-6 text-center"><%= link_to 'New lot', new_lot_path, class: "btn btn-info" %></div>
+	</div>
+	<div class = "row">
+		<div class = " col-12 text-center">
+			<%= link_to 'Back', carparks_path %>
+		</div>
+	</div>
 </div>

@@ -4,10 +4,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     if user_signed_in?
       user_path
-    elsif admin_signed_in?
-      admin_path
-    elsif summon_signed_in?
-      summon_path
+    elsif admin_signed_in? || summon_signed_in?
+      carparks_path
     else
       root_path
     end
