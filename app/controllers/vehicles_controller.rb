@@ -1,4 +1,5 @@
 class VehiclesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @vehicles = Vehicle.all.where(:user_id => current_user)
