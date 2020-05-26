@@ -90,7 +90,7 @@
 </nav>
 <% end %>
 
-<div class="container-fluid my-5">
+<div class="container-fluid my-5 w-75">
 	<div class="row my-5">
 		<div class = "col-12 text-center">
 			<h2>Location: <%= @carpark.location %></h2>
@@ -121,11 +121,6 @@
 		</div>
 	</div>
 
-
-	<p>
-
-	</p>
-
 	<div class=" row">
 		<% @carpark.lots.each do |lot| %>
 
@@ -143,31 +138,25 @@
 		<div class = "col-12 text-center">
 			<% if @carpark.totallots - @carpark.reservedlots == 0 %>
 			<div>	No more season parking lots. Try again another time </div>
+
 			<div class="col-3">
-
 				<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
 			</div>
-
 			<% elsif @carpark.reservedlots == 0 %>
-			<div class="">
+			<div class="row">
 				<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
-
-				<% else %>
-
-
-
-
-				<%= link_to 'Apply/Remove season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
-
-				<% end %>
 			</div>
+			<% else %>
+			<%= link_to 'Apply/Remove season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
+			<% end %>
 		</div>
 	</div>
-	<div class= "row">
 
+	<div class= "row">
 		<div class = "col-6 text-center"><%= link_to 'View lot', lots_path, class: "btn btn-info" %></div>
 		<div class = "col-6 text-center"><%= link_to 'New lot', new_lot_path, class: "btn btn-info" %></div>
 	</div>
+
 	<div class = "row">
 		<div class = " col-12 text-center">
 			<%= link_to 'Back', carparks_path %>
