@@ -64,7 +64,11 @@
 			<tbody>
 				<% @vehicles.each.with_index do |vehicle, index| %>
 				<tr>
+<<<<<<< HEAD
 					<th scope="row"><%= @index + 1 %></th>
+=======
+					<th scope="row"><%= index+1 %></th>
+>>>>>>> dda790328cf6ab691ef20d6cb42185c9fdf91dba
 					<td><%= link_to vehicle.license_plate, vehicle_path(vehicle) %></td>
 					<td><%= vehicle.vehicle_model %></td>
 					<% if vehicle.lots.present? %>

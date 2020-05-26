@@ -1,4 +1,8 @@
 class HomesController < ApplicationController
+  def index
+    @carparks = Carpark.all
+  end
+
   def landing
   end
 

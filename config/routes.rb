@@ -53,4 +53,7 @@ Rails.application.routes.draw do
   get 'carparks/:id/offences/new' => 'offences#new', as: 'new_offence'
   post 'carparks/:id/offences/' => 'offences#create'
   get '/offences/:id' => 'offences#show' , as: 'offence'
+
+  get '/admins/' => 'homes#index', as: 'admin'
+  get '/summons/' => 'homes#landing', as: 'summon'
 end
