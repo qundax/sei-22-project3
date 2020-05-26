@@ -1,13 +1,19 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, :except => [:show, :index, :loginrole, :signuprole, :signup]
-
   protected
 
   def after_sign_in_path_for(resource)
-    # return the path based on resource
+    if user_signed_in?
+      user_path
+    elsif admin_signed_in?
+      admin_path
+    elsif summon_signed_in?
+      summon_path
+    else
+      root_path
+    end
   end
 
   def after_sign_out_path_for(resource)
-    # return the path based on resource
+    root_path
   end
 end
