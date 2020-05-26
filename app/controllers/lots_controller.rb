@@ -1,5 +1,5 @@
 class LotsController < ApplicationController
-
+ before_action :authenticate_admin!, :except => [:show, :index]
   def index
     @carpark = Carpark.find(params[:id])
     puts @carpark.lots.count
