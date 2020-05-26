@@ -1,62 +1,82 @@
-<p>
-  <strong>Location:</strong>
-  <%= @carpark.location %>
-</p>
+<div class="row mt-5 mb-5">
+	<div class = "col-12 text-center">
+		  <h1>Location: <%= @carpark.location %></h1>
 
-<p>
-  <strong>Photo url:</strong>
-  <%= @carpark.photo_url %>
-</p>
+	</div>
+
+</div>
 
 
-<p>
+<div class="row">
+	<div class = "col-12 text-center">
+
+
+  <img src=<%= @carpark.photo_url %>   width="50%" height="100%" alt="Carpark image" />
+	</div>
+
+</div>
+
+
+<div class="row mt-5">
+	<div class = "col-6 text-center ">
   <strong>Lots taken:</strong>
   <%= @carpark.reservedlots %>
-</p>
+	</div>
+		<div class = "col-6 text-center ">
+<strong>Lots remaining:</strong>
+  <%= @carpark.totallots - @carpark.reservedlots %>
+	</div>
+</div>
 
 
 <p>
-  <strong>Lots remaining:</strong>
-  <%= @carpark.totallots - @carpark.reservedlots %>
+
 </p>
 
-
+<div class=" row">
  <% @carpark.lots.each do |lot| %>
 
-      <div><%= lot.lotNumber %></div>
+      <div class="col-4 border text-center"><%= lot.lotNumber %><br/>
       <% if lot.taken %>
-      	<div> Taken by <%= lot.vehicle.license_plate %></div>
+      	 Taken by <%= lot.vehicle.license_plate %></div>
       <% else %>
-      	<div>Not Taken</div>
+      	Not Taken</div>
       	<% end %>
 <% end %>
+</div>
 
-<div><%= link_to 'View lot', lots_path %></div>
-<div><%= link_to 'New lot', new_lot_path %></div>
 
+<div class="row">
+	<div class = "col-12 text-center">
       <% if @carpark.totallots - @carpark.reservedlots == 0 %>
       	<div>	No more season parking lots. Try again another time </div>
       	 <div class="col-3">
-      		<p><%= link_to 'Remove application for season parking', carpark_path(@carpark),
-        	method: :delete,
-        	data: { confirm: 'Are you sure?' } %></p>
+
+      		 	<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
       	</div>
 
       <% elsif @carpark.reservedlots == 0 %>
-      	<div><%= link_to 'Apply for season parking', edit_carpark_path(@carpark) %></div>
-      	    		 <div class="col-3">
+      		<div class="">
+      	      		 	<%= link_to 'Apply season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
+
       <% else %>
 
 
 
 
-      	<div><%= link_to 'Apply for season parking', edit_carpark_path(@carpark) %></div>
-      	    		 <div class="col-3">
-      		<p><%= link_to 'Remove application for season parking', carpark_path(@carpark),
-        	method: :delete,
-        	data: { confirm: 'Are you sure?' } %></p>
-      	</div>
+      <%= link_to 'Apply/Remove season parking', edit_carpark_path(@carpark), class: "btn btn-primary"%>
+
       	<% end %>
+     </div>
+</div>
+</div>
+<div class= "row">
 
-
-<%= link_to 'Back', carparks_path %>
+<div class = "col-6 text-center"><%= link_to 'View lot', lots_path, class: "btn btn-info" %></div>
+<div class = "col-6 text-center"><%= link_to 'New lot', new_lot_path, class: "btn btn-info" %></div>
+</div>
+<div class = "row">
+	<div class = " col-12 text-center">
+<%= link_to 'Back', carparks_path , class: "btn btn-secondary"%>
+</div>
+</div>

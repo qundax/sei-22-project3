@@ -1,20 +1,20 @@
 <div class ="row mt-4">
-	<div class="col-12 text-center border">
+	<div class="col-12 text-center ">
 <h1>Welcome to shinra carpark</h1>
 	</div>
 </div>
 
 <div class="row">
-	<div class="col-12 text-right border">
+	<div class="col-12 text-right ">
 		<h3><%= Date.today %></h3>
 	</div>
 </div>
 <div class ="row">
-	<div class="col-4 text-center border">
-<div><%= link_to 'New carpark', new_carpark_path %></div>
+	<div class="col-4 text-center ">
+<div><%= link_to 'Add New carpark', new_carpark_path %></div>
 </div>
 	<div class="col-4 text-right my-auto	">
-		<p>Find region: </p>
+		<p>Find carpark by region: </p>
 </div>
 	<div class="col-4 text-center classname border">
 		<% @regions.each do |region| %>

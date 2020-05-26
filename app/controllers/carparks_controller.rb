@@ -1,5 +1,5 @@
 class CarparksController < ApplicationController
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, :except => [:show, :index, :edit, :update, :destroy]
 
   def index
     @carparks = Carpark.all
