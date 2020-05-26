@@ -1,8 +1,10 @@
 <% if admin_signed_in? %>
 	<div id="navbar" class="d-flex justify-content-between">
+	<a href="/">
 		<div id="logo">
-			<a href="/">PLACEHOLDER</a>
+			<%= image_tag 'logo.png', style: 'height: 100%;' %>
 		</div>
+	</a>
 
 		<div id="user-actions" class="my-2">
 			<nav class="navbar navbar-expand">
