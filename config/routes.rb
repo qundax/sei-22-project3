@@ -4,7 +4,17 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: { sessions: "admins/sessions", registrations: "admins/registrations" }
   devise_for :summons, controllers: { sessions: "summons/sessions", registrations: "summons/registrations" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'homes#index'
+  # Main Paths
+  root 'homes#landing'
+
+  get '/login/role' => 'homes#loginrole'
+  get '/signup/role' => 'homes#signuprole'
+
+
+  # User Paths
+  get '/vehicles' => 'vehicles#index', as: 'user'
+
+
 
   get '/carparks' => 'carparks#index', as: 'carparks'
   get '/carparks/new' => 'carparks#new', as: 'new_carpark'
@@ -32,18 +42,14 @@ Rails.application.routes.draw do
   #delete '/regions/:id' => 'regions#destroy'
 
 
-  get '/role' => 'homes#role'
 
 
 
 
 
 
-  get '/login/role' => 'homes#loginrole'
-  get '/signup/role' => 'homes#signuprole'
 
-  
-    get 'carparks/:id/offences/' => 'offences#index', as: 'offences'
+  get 'carparks/:id/offences/' => 'offences#index', as: 'offences'
   get 'carparks/:id/offences/new' => 'offences#new', as: 'new_offence'
   post 'carparks/:id/offences/' => 'offences#create'
   get '/offences/:id' => 'offences#show' , as: 'offence'
