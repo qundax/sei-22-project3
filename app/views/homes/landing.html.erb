@@ -7,7 +7,7 @@
 
 	<nav class="navbar navbar-expand">
 		<ul class="navbar-nav">
-			<% if !current_user || current_admin || current_summon %>
+			<% unless current_user || current_admin || current_summon %>
 			<li class="nav-item">
 				<a class="nav-link" href="/login/role">LOG IN</a>
 			</li>
