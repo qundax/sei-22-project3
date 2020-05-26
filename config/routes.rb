@@ -34,17 +34,14 @@ Rails.application.routes.draw do
 
   get '/role' => 'homes#role'
 
-
-
-
-
-
   get '/login/role' => 'homes#loginrole'
   get '/signup/role' => 'homes#signuprole'
 
-  
-    get 'carparks/:id/offences/' => 'offences#index', as: 'offences'
-  get 'carparks/:id/offences/new' => 'offences#new', as: 'new_offence'
-  post 'carparks/:id/offences/' => 'offences#create'
+
+    get '/carparks/:id/offences/' => 'offences#index', as: 'offences'
+  get '/carparks/:id/offences/new' => 'offences#new', as: 'new_offence'
+  post '/carparks/:id/offences/' => 'offences#create'
   get '/offences/:id' => 'offences#show' , as: 'offence'
+
+  get '/dashboard' => 'homes#index', as: 'homes'
 end
