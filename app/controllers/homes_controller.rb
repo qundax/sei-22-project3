@@ -1,6 +1,5 @@
 class HomesController < ApplicationController
-  def index
-    @carparks = Carpark.all
+  def landing
   end
 
   def about
