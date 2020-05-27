@@ -36,7 +36,9 @@ Please gather as a group to answer the following questions. Take at least 30 min
 
 1. What in our code and program design in the project would we do differently next time?
 
-1. What in our code and program design in the project went well? Is there anything we would do the same next time?
+* Use a different framework because it is hard to isolate problems in Rails
+
+2. What in our code and program design in the project went well? Is there anything we would do the same next time?
 
   For each, please include code examples that each team member wrote.
   1. Code snippet up to 20 lines.
