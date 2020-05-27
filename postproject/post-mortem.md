@@ -31,5 +31,18 @@
 
 #### WDI Unit 3 Post Mortem (individual)
 1. What habits did I use during this unit that helped me?
+
+
+
+* Kenneth: Really going step by step is important, troubleshooting (finding out what caused the error is also crucial) plays a key role in understanding the new language. Continuous experimentation and perseverance is the key ingredients to success for a new language. The basic of input, process and output are the 3 key concept in any language.
+
+
 2. What habits did I have during this unit that I can improve on?
+
+
+
+* Kenneth: Better communication. Sometimes, it doesn't hurt to ask.
+
 3. How is the overall level of the course during this unit? (instruction, course materials, etc.)
+
+* Kenneth: If I were to be honest, I am extremely lost for this topic. I really had to do my self reading to learn and figure things out. Course material was generally alright but it could seriously improve.
