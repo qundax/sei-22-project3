@@ -19,9 +19,15 @@ Please gather as a group to answer the following questions. Take at least 30 min
 
 1. What in our process and approach to this project would we do differently next time?
 
-  * test
+* ERD could have been more detailed before we move on to the rest of the project
 
-1. What in our process and approach to this project went well that we would repeat next time?
+* Might be useful to have a sitemap up at the start so that everyone is clear on how the pages interact with one another
+
+* More communication is needed to get everybody on the same page, and that when someone is waiting on another person, we need to sync up
+
+2. What in our process and approach to this project went well that we would repeat next time?
+
+* Pair coding is good for debugging, and for a fresh perspective
 
 
 --
